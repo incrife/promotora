@@ -3,781 +3,898 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>INCRIFE FAN | Comunidad Oficial · Contenido Exclusivo</title>
-    <meta name="description" content="INCRIFE Fan Page - Comunidad oficial de fans. Últimas noticias, fotos, videoclips y contenido exclusivo de INCRIFE. Únete a la comunidad.">
-    <meta name="theme-color" content="#cc0000">
-    <meta property="og:title" content="INCRIFE FAN | Comunidad Oficial">
-    <meta property="og:description" content="Comunidad oficial de fans de INCRIFE. Contenido exclusivo, noticias, fotos y videoclips.">
-    <meta property="og:url" content="https://incrife.com/fan">
+    <title>NEXUS NIGHT | Promotora de Talentos para Discotecas · Barcelona</title>
+    <meta name="description" content="NEXUS NIGHT conecta discotecas con los mejores DJs y artistas. Gestión de talento, booking profesional y comisiones transparentes. Especialistas en Barcelona.">
+    <meta name="keywords" content="promotora discotecas barcelona, contratar djs barcelona, booking artistas, gestión talento discotecas, noche barcelona">
+    <meta name="theme-color" content="#06060e">
+    <meta property="og:title" content="NEXUS NIGHT | Promotora de Talentos para Discotecas">
+    <meta property="og:description" content="Conectamos discotecas con el mejor talento. Booking, gestión y comisiones justas.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png">
-    <meta property="og:locale" content="es_ES">
-    <meta property="og:site_name" content="INCRIFE FAN">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="INCRIFE FAN | Comunidad Oficial">
-    <meta name="twitter:description" content="Comunidad oficial de fans de INCRIFE. Contenido exclusivo y noticias.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png">
-    <link rel="canonical" href="https://incrife.com/fan">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(58).png">
+    <meta property="og:url" content="https://nexusnight.com">
+    <link rel="canonical" href="https://nexusnight.com">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <!-- Schema.org para SEO Local Barcelona -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NEXUS NIGHT",
+      "alternateName": "Nexus Night Promotora",
+      "description": "Promotora de talentos para discotecas en Barcelona. Conexión entre venues y artistas con gestión profesional de booking.",
+      "url": "https://nexusnight.com",
+      "logo": "https://nexusnight.com/images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Barcelona",
+        "addressRegion": "Barcelona",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34 671 59 18 14",
+        "contactType": "customer service",
+        "email": "booking@nexusnight.com",
+        "availableLanguage": ["Spanish", "English", "Catalan"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/incrife",
+        "https://www.tiktok.com/@incrife",
+        "https://twitter.com/incrife"
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Barcelona"
+      },
+      "priceRange": "€€"
+    }
+    </script>
+    
+    <!-- Schema LocalBusiness específico para Barcelona -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "NEXUS NIGHT - Promotora Discotecas Barcelona",
+      "image": "https://nexusnight.com/images/og-image.jpg",
+      "priceRange": "€€",
+      "servesCuisine": "Nightlife & Entertainment Booking",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrer de Balmes, 150",
+        "addressLocality": "Barcelona",
+        "postalCode": "08008",
+        "addressRegion": "Barcelona",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.3958,
+        "latitude": 2.1621
+      },
+      "telephone": "+34 671 59 18 14",
+      "email": "booking@nexusnight.com",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "10:00",
+        "closes": "19:00"
+      }
+    }
+    </script>
+
     <style>
-        /* ========== RESET Y VARIABLES ========== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --bg-primary: #06060e;
-            --bg-secondary: #0d0d1a;
-            --bg-card: #0f0f1a;
-            --bg-card-hover: #16162a;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0c0;
-            --text-tertiary: #6b6b8d;
-            --border-color: rgba(255,255,255,0.08);
-            --accent-red: #cc0000;
-            --accent-red-light: #ff3333;
-            --accent-red-dark: #990000;
-            --shadow-red: 0 0 20px rgba(204,0,0,0.2);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 24px;
-        }
-        
-        [data-theme="light"] {
-            --bg-primary: #f5f5f7;
-            --bg-secondary: #ffffff;
-            --bg-card: #ffffff;
-            --bg-card-hover: #f0f0f5;
-            --text-primary: #0a0a0a;
-            --text-secondary: #333333;
-            --text-tertiary: #666666;
-            --border-color: rgba(0,0,0,0.1);
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            overflow-x: hidden;
-            line-height: 1.6;
-            transition: background 0.3s ease, color 0.3s ease;
-            cursor: none;
-        }
-        
-        /* Custom Cursor */
-        .custom-cursor {
-            width: 28px;
-            height: 28px;
-            border: 2px solid var(--accent-red);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease;
-            backdrop-filter: invert(1);
-            transform: translate(-50%, -50%);
-        }
-        
-        .custom-cursor.hover {
-            width: 50px;
-            height: 50px;
-            background: rgba(204,0,0,0.15);
-            border-color: var(--accent-red-light);
-        }
-        
-        @media (max-width: 768px) {
-            .custom-cursor { display: none; }
-            body { cursor: auto; }
-        }
-        
-        /* Canvas Background */
-        #networkCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0.4;
-        }
-        
-        /* Splash Screen */
-        #splash {
-            position: fixed;
-            inset: 0;
-            background: #06060e;
-            z-index: 10000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
-        }
-        
-        #splash.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-        
-        .splash-logo {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff, var(--accent-red-light));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -1px;
-            margin-bottom: 1rem;
-        }
-        
-        .splash-logo span {
-            background: linear-gradient(135deg, var(--accent-red-light), #fff);
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-        
-        .splash-tagline {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-        }
-        
-        .splash-loader {
-            width: 120px;
-            height: 2px;
-            background: rgba(204,0,0,0.2);
-            border-radius: 2px;
-            overflow: hidden;
-        }
-        
-        .splash-loader-bar {
-            width: 0%;
-            height: 100%;
-            background: var(--accent-red);
-            animation: loaderBar 1.5s ease forwards;
-        }
-        
-        @keyframes loaderBar {
-            0% { width: 0%; }
-            100% { width: 100%; }
-        }
-        
-        /* Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(6,6,14,0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-        
-        [data-theme="light"] .navbar {
-            background: rgba(245,245,247,0.85);
-        }
-        
-        .nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            height: 70px;
-        }
-        
-        .nav-logo {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff, var(--accent-red-light));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-decoration: none;
-        }
-        
-        .nav-logo span {
-            background: linear-gradient(135deg, var(--accent-red-light), #fff);
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent-red-light);
-        }
-        
-        .nav-cta {
-            background: var(--accent-red);
-            padding: 0.5rem 1.2rem;
-            border-radius: 30px;
-            color: white !important;
-        }
-        
-        .nav-cta:hover {
-            background: var(--accent-red-dark);
-            transform: translateY(-2px);
-        }
-        
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        /* Theme Toggle */
-        .theme-toggle {
-            width: 48px;
-            height: 24px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 30px;
-            position: relative;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 5px;
-        }
-        
-        .ball {
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            background: var(--accent-red);
-            border-radius: 50%;
-            left: 3px;
-            transition: transform 0.3s ease;
-        }
-        
-        [data-theme="light"] .ball {
-            transform: translateX(24px);
-        }
-        
-        .icon-sun, .icon-moon {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            z-index: 1;
-        }
-        
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .hamburger span {
-            width: 22px;
-            height: 2px;
-            background: var(--text-primary);
-            transition: var(--transition);
-        }
-        
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -280px;
-            width: 280px;
-            height: 100%;
-            background: var(--bg-primary);
-            z-index: 1001;
-            transition: right 0.3s ease;
-            padding: 5rem 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            border-left: 1px solid var(--border-color);
-        }
-        
-        .mobile-menu.active {
-            right: 0;
-        }
-        
-        .mobile-menu a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-        
-        .mobile-menu-close {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            font-size: 1.8rem;
-            background: none;
-            border: none;
-            color: var(--text-primary);
-            cursor: pointer;
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.8rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: var(--radius-sm);
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .btn-primary {
-            background: var(--accent-red);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background: var(--accent-red-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-red);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-        }
-        
-        .btn-outline:hover {
-            border-color: var(--accent-red);
-            color: var(--accent-red-light);
-        }
-        
-        .btn-lg {
-            padding: 1rem 2.2rem;
-            font-size: 0.9rem;
-        }
-        
-        .btn-sm {
-            padding: 0.4rem 1rem;
-            font-size: 0.7rem;
-        }
-        
-        /* Sections */
-        section {
-            padding: 6rem 0;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-label {
-            font-size: 0.7rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--accent-red-light);
-            margin-bottom: 1rem;
-        }
-        
-        .section-header h2 {
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        
-        .section-subtitle {
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 1rem auto 0;
-        }
-        
-        /* Hero */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .hero-content h1 {
-            font-size: clamp(2.2rem, 5vw, 4rem);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            margin-bottom: 1.5rem;
-        }
-        
-        .gradient-neon {
-            background: linear-gradient(135deg, #fff, var(--accent-red-light), #ff6666);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .hero-subtitle {
-            color: var(--text-secondary);
-            font-size: clamp(0.9rem, 3vw, 1.1rem);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-        
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        /* Cards Grid */
-        .services-grid, .news-grid, .collab-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .service-card, .news-card, .collab-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            transition: var(--transition);
-        }
-        
-        .service-card:hover, .news-card:hover, .collab-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-red);
-            box-shadow: var(--shadow-red);
-        }
-        
-        .service-card h3, .news-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-        }
-        
-        .service-card p, .news-card p {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
-        }
-        
-        .service-card__price {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--accent-red-light);
-            margin-bottom: 1rem;
-        }
-        
-        .service-card__features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-card__features li {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .service-card__features li i {
-            color: var(--accent-red-light);
-            font-size: 0.7rem;
-        }
-        
-        .btn-block {
-            width: 100%;
-            justify-content: center;
-        }
-        
-        /* Process */
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .process-card {
-            text-align: center;
-            padding: 2rem;
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-color);
-        }
-        
-        .process-number {
-            width: 50px;
-            height: 50px;
-            background: var(--accent-red);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin: 0 auto 1rem;
-        }
-        
-        /* IA Grid */
-        .ia-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .ia-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            text-align: center;
-            border: 1px solid var(--border-color);
-        }
-        
-        .ia-card i {
-            font-size: 2rem;
-            color: var(--accent-red-light);
-            margin-bottom: 1rem;
-        }
-        
-        /* Portfolio */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .portfolio-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-        
-        .portfolio-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-red);
-        }
-        
-        .portfolio-card__image {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .portfolio-card__image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .portfolio-card:hover .portfolio-card__image img {
-            transform: scale(1.05);
-        }
-        
-        .portfolio-card__overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: var(--transition);
-        }
-        
-        .portfolio-card:hover .portfolio-card__overlay {
-            opacity: 1;
-        }
-        
-        .portfolio-card__body {
-            padding: 1.5rem;
-        }
-        
-        .portfolio-card__body h3 {
-            margin-bottom: 0.5rem;
-        }
-        
-        .portfolio-card__body p {
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        .portfolio-btn-side {
-            display: inline-flex;
-        }
-        
-        /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 2rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        
-        .contact-info-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: var(--bg-card);
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-        }
-        
-        .contact-info-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(204,0,0,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--accent-red-light);
-        }
-        
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .contact-form input, .contact-form select, .contact-form textarea {
-            padding: 1rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-tertiary);
-            font-size: 0.8rem;
-        }
-        
-        /* Floating Buttons */
-        .floating-buttons {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 99;
-        }
-        
-        .floating-btn {
-            width: 50px;
-            height: 50px;
-            background: var(--accent-red);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-        
-        .floating-btn:hover {
-            transform: scale(1.1);
-            background: var(--accent-red-dark);
-        }
-        
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 45px;
-            height: 45px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            color: var(--text-primary);
-            cursor: pointer;
-            transition: var(--transition);
-            z-index: 99;
-            opacity: 0;
-            visibility: hidden;
-        }
-        
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .back-to-top:hover {
-            background: var(--accent-red);
-            color: white;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .hero-actions { flex-direction: column; align-items: center; }
-            .btn { width: 100%; justify-content: center; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .portfolio-grid { grid-template-columns: 1fr; }
-            section { padding: 4rem 0; }
-            .container { padding: 0 1.2rem; }
-        }
-        
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 1.8rem; }
-            .services-grid { grid-template-columns: 1fr; }
-        }
+    /* ============================================
+       NEXUS NIGHT - ESTILOS PRINCIPALES
+       Basado en 930 Digital - Optimizado
+       ============================================ */
+
+    /* ---------- VARIABLES Y TEMAS ---------- */
+    :root {
+        --neon-cyan: #00e5ff;
+        --neon-cyan-dark: #00b8d4;
+        --neon-cyan-glow: #80f0ff;
+        --neon-magenta: #bf00ff;
+        --neon-magenta-dark: #9900cc;
+        --neon-magenta-glow: #d980ff;
+        --bg: #06060e;
+        --bg-alt: #0a0a16;
+        --bg-card: #0e0e1c;
+        --bg-card-hover: #121224;
+        --text: #f0f0f5;
+        --text-secondary: #b0b0c0;
+        --text-muted: #707080;
+        --border: #1a1a2e;
+        --border-glow: rgba(0,229,255,0.15);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+        --shadow-md: 0 4px 15px rgba(0,0,0,0.4);
+        --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+        --shadow-neon: 0 0 20px rgba(0,229,255,0.1), 0 0 40px rgba(191,0,255,0.06);
+        --shadow-neon-strong: 0 0 30px rgba(0,229,255,0.2), 0 0 60px rgba(191,0,255,0.12);
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --radius-xl: 24px;
+        --radius-full: 9999px;
+        --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+        --z-splash: 100000;
+        --font-display: 'Plus Jakarta Sans', sans-serif;
+        --font-body: 'Inter', sans-serif;
+    }
+
+    body.light {
+        --bg: #f8f9fa;
+        --bg-alt: #f0f1f3;
+        --bg-card: #ffffff;
+        --bg-card-hover: #f5f5f8;
+        --text: #1a1a2e;
+        --text-secondary: #4a4a5a;
+        --text-muted: #808090;
+        --border: #e0e0e8;
+        --border-glow: rgba(0,184,212,0.2);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+        --shadow-md: 0 4px 15px rgba(0,0,0,0.08);
+        --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
+        --shadow-neon: 0 0 20px rgba(0,184,212,0.08), 0 0 40px rgba(153,0,204,0.04);
+        --shadow-neon-strong: 0 0 30px rgba(0,184,212,0.15), 0 0 60px rgba(153,0,204,0.08);
+    }
+
+    /* ---------- RESET Y BASE ---------- */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+        font-family: var(--font-body);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+        overflow-x: hidden;
+        transition: background 0.5s ease, color 0.5s ease;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+    section { padding: 5rem 0; position: relative; z-index: 2; }
+    .bg-alt { background: var(--bg-alt); }
+
+    /* ---------- TIPOGRAFÍA ---------- */
+    h1, h2, h3 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+    }
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+    h3 { font-size: 1.1rem; }
+    .gradient-neon {
+        background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-magenta) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+    .section-label {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--neon-cyan);
+        margin-bottom: 0.8rem;
+        background: rgba(0,229,255,0.06);
+        padding: 0.4rem 1.2rem;
+        border-radius: var(--radius-full);
+        border: 1px solid rgba(0,229,255,0.15);
+    }
+    .section-subtitle {
+        color: var(--text-secondary);
+        font-size: 1rem;
+        max-width: 500px;
+        margin: 0.8rem auto 0;
+    }
+
+    /* ---------- SPLASH SCREEN ---------- */
+    #splash {
+        position: fixed;
+        inset: 0;
+        z-index: var(--z-splash);
+        background: radial-gradient(ellipse at center, #0a0a1a 0%, #020208 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), visibility 0.8s ease;
+        padding: 1.5rem;
+    }
+    #splash.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .splash-logo {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 10vw, 4rem);
+        font-weight: 800;
+        color: #fff;
+        text-shadow: 0 0 30px var(--neon-cyan), 0 0 60px var(--neon-cyan-glow), 0 0 100px var(--neon-magenta);
+        animation: neonPulse 2s ease-in-out infinite, floatLogo 1.5s ease-out;
+        transform-origin: center;
+        text-align: center;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
+    }
+    .splash-logo span {
+        background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .splash-tagline {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: clamp(0.6rem, 4vw, 0.75rem);
+        letter-spacing: 4px;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+        animation: fadeInUp 0.8s ease 0.6s forwards;
+        opacity: 0;
+    }
+    .splash-loader {
+        width: min(200px, 70vw);
+        height: 2px;
+        background: rgba(0, 229, 255, 0.15);
+        border-radius: 2px;
+        margin-top: 2rem;
+        overflow: hidden;
+        position: relative;
+    }
+    .splash-loader-bar {
+        height: 100%;
+        background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta), var(--neon-cyan));
+        background-size: 200% auto;
+        animation: loading 2.2s cubic-bezier(0.65, 0, 0.35, 1) forwards, shimmerLoader 1.5s linear infinite;
+        width: 0;
+    }
+    @keyframes neonPulse {
+        0%, 100% { text-shadow: 0 0 30px var(--neon-cyan), 0 0 60px var(--neon-cyan-glow), 0 0 100px var(--neon-magenta); }
+        50% { text-shadow: 0 0 40px var(--neon-cyan), 0 0 80px var(--neon-cyan-glow), 0 0 140px var(--neon-magenta), 0 0 160px var(--neon-magenta-glow); }
+    }
+    @keyframes floatLogo {
+        0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes loading { to { width: 100%; } }
+    @keyframes shimmerLoader {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 200% 50%; }
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(6,6,14,0.92);
+        backdrop-filter: blur(24px);
+        border-bottom: 1px solid var(--border);
+        transition: var(--transition);
+    }
+    body.light .navbar { background: rgba(248,249,250,0.92); }
+    .navbar.scrolled {
+        box-shadow: 0 0 20px rgba(0,229,255,0.15), 0 0 40px rgba(191,0,255,0.1);
+        border-bottom-color: var(--neon-cyan);
+    }
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+    }
+    .nav-logo {
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--text);
+        text-decoration: none;
+        letter-spacing: -0.01em;
+    }
+    .nav-logo span {
+        color: var(--neon-cyan);
+        text-shadow: 0 0 10px var(--neon-cyan);
+    }
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+    .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--neon-cyan); }
+    .nav-cta {
+        background: linear-gradient(135deg, var(--neon-cyan-dark), var(--neon-magenta-dark));
+        color: #fff !important;
+        padding: 0.5rem 1.4rem;
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        text-transform: none;
+        font-size: 0.8rem;
+        box-shadow: 0 0 20px rgba(0,229,255,0.25);
+    }
+    .nav-cta:hover {
+        box-shadow: 0 0 30px rgba(0,229,255,0.45);
+        transform: translateY(-1px);
+    }
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .theme-toggle {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-full);
+        width: 54px;
+        height: 28px;
+        cursor: pointer;
+        position: relative;
+        transition: var(--transition);
+        overflow: hidden;
+    }
+    .theme-toggle .ball {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+        border-radius: 50%;
+        top: 2px;
+        left: 3px;
+        transition: left 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
+        z-index: 2;
+    }
+    body.light .theme-toggle .ball { left: 27px; }
+    .theme-toggle .icon-sun,
+    .theme-toggle .icon-moon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.8rem;
+        transition: opacity 0.2s ease;
+        z-index: 1;
+    }
+    .theme-toggle .icon-sun { left: 9px; color: #222; opacity: 0; }
+    .theme-toggle .icon-moon { right: 9px; color: #00E5FF; opacity: 1; }
+    body.light .theme-toggle .icon-sun { opacity: 1; }
+    body.light .theme-toggle .icon-moon { opacity: 0; }
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+    }
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+        background: var(--text);
+        display: block;
+        border-radius: 2px;
+    }
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: var(--bg);
+        z-index: 10000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease;
+    }
+    .mobile-menu.active { transform: translateY(0); display: flex; }
+    .mobile-menu a {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text);
+        text-decoration: none;
+        font-family: var(--font-display);
+    }
+    .mobile-menu-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: var(--text);
+        cursor: pointer;
+    }
+
+    /* ---------- BOTONES ---------- */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.8rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        border-radius: var(--radius-full);
+        transition: var(--transition);
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        font-family: var(--font-body);
+        white-space: nowrap;
+    }
+    .btn-primary {
+        background: linear-gradient(135deg, var(--neon-cyan-dark), var(--neon-magenta-dark));
+        color: #fff;
+        box-shadow: 0 0 25px rgba(0,229,255,0.3);
+    }
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 35px rgba(0,229,255,0.5);
+    }
+    .btn-outline {
+        background: transparent;
+        color: var(--neon-cyan);
+        border: 1.5px solid var(--neon-cyan);
+    }
+    .btn-outline:hover {
+        background: var(--neon-cyan);
+        color: var(--bg);
+        box-shadow: 0 0 25px rgba(0,229,255,0.3);
+    }
+    .btn-lg { padding: 0.95rem 2.4rem; font-size: 0.85rem; }
+    .btn-block { width: 100%; justify-content: center; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: -40%;
+        right: -25%;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(circle, rgba(0,229,255,0.05) 0%, transparent 60%);
+        border-radius: 50%;
+    }
+    .hero-content {
+        max-width: 700px;
+        position: relative;
+        z-index: 2;
+    }
+    .hero h1 { margin-bottom: 1.2rem; }
+    .hero-subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 2.2rem;
+        line-height: 1.8;
+    }
+    .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    /* ---------- SERVICIOS ---------- */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    .service-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 2rem 1.5rem;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+        transform: scaleX(0);
+        transition: transform var(--transition);
+    }
+    .service-card:hover {
+        background: var(--bg-card-hover);
+        border-color: var(--border-glow);
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-neon);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card--featured {
+        border-color: var(--neon-cyan);
+        box-shadow: 0 0 20px rgba(0,229,255,0.08);
+    }
+    .service-card__commission {
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: var(--font-display);
+        background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 1rem 0;
+    }
+    .service-card__features {
+        list-style: none;
+        margin: 1rem 0 1.5rem;
+    }
+    .service-card__features li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.6rem;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+    }
+    .service-card__features li i { color: var(--neon-cyan); font-size: 0.75rem; }
+
+    /* ---------- CÓMO FUNCIONA ---------- */
+    .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .process-card {
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .process-number {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0 auto 1.2rem;
+        font-family: var(--font-display);
+        background: linear-gradient(135deg, var(--neon-cyan-dark), var(--neon-magenta-dark));
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0,229,255,0.3);
+    }
+
+    /* ---------- TALENTO ---------- */
+    .talent-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .talent-card {
+        padding: 1.8rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        transition: var(--transition);
+        text-align: center;
+    }
+    .talent-card:hover {
+        border-color: var(--neon-cyan);
+        box-shadow: var(--shadow-neon);
+    }
+    .talent-card i {
+        font-size: 2.5rem;
+        color: var(--neon-cyan);
+        margin-bottom: 1rem;
+    }
+
+    /* ---------- VENUES (Portfolio) ---------- */
+    .venues-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .venue-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: var(--transition);
+    }
+    .venue-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-neon);
+        border-color: var(--neon-cyan);
+    }
+    .venue-card__image {
+        height: 200px;
+        background: linear-gradient(135deg, #1a1a2e, #0a0a16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: var(--neon-cyan);
+    }
+    .venue-card__body {
+        padding: 1.2rem;
+    }
+    .venue-card__body h3 {
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+    }
+    .venue-card__body p {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+    }
+
+    /* ---------- CONTACTO ---------- */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+    .contact-form {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        margin-bottom: 0.8rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        font-family: var(--font-body);
+        font-size: 0.88rem;
+        background: var(--bg);
+        color: var(--text);
+        transition: var(--transition);
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+        outline: none;
+        border-color: var(--neon-cyan);
+        box-shadow: 0 0 10px rgba(0,229,255,0.1);
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .contact-info-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.2rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        transition: var(--transition);
+    }
+    .contact-info-item:hover {
+        border-color: var(--neon-cyan);
+        box-shadow: var(--shadow-neon);
+    }
+    .contact-info-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--neon-cyan-dark), var(--neon-magenta-dark));
+        color: #fff;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+    .contact-info-text strong {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--text-muted);
+        margin-bottom: 0.2rem;
+    }
+    .contact-info-text p {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+        background: var(--bg-alt);
+        text-align: center;
+        padding: 2rem 0;
+        border-top: 1px solid var(--border);
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .footer-social {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    .footer-social a {
+        color: var(--text-secondary);
+        font-size: 1.3rem;
+        transition: color 0.3s, transform 0.3s;
+    }
+    .footer-social a:hover {
+        color: var(--neon-cyan);
+        transform: translateY(-2px);
+    }
+    .footer p {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+    }
+
+    /* ---------- BOTONES FLOTANTES ---------- */
+    .floating-buttons {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: linear-gradient(135deg, var(--neon-cyan-dark), var(--neon-magenta-dark));
+        box-shadow: 0 0 20px rgba(0,229,255,0.3);
+    }
+    .floating-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(0,229,255,0.5);
+    }
+
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--neon-cyan-dark), var(--neon-magenta-dark));
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        box-shadow: 0 0 20px rgba(0,229,255,0.3);
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+    .back-to-top:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 30px rgba(0,229,255,0.5);
+    }
+
+    /* ---------- CANVAS Y CURSOR ---------- */
+    #networkCanvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.4;
+    }
+    .custom-cursor {
+        position: fixed;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(0, 229, 255, 0.25);
+        backdrop-filter: blur(3px);
+        border: 1.5px solid var(--neon-cyan);
+        box-shadow: 0 0 15px var(--neon-cyan);
+        pointer-events: none;
+        z-index: 10000;
+        transform: translate(-50%, -50%);
+        transition: width 0.2s, height 0.2s;
+    }
+    .custom-cursor.active {
+        width: 48px;
+        height: 48px;
+        background: rgba(191, 0, 255, 0.2);
+        border-color: var(--neon-magenta);
+        box-shadow: 0 0 25px var(--neon-magenta);
+    }
+
+    @media (pointer: coarse) {
+        .custom-cursor { display: none !important; }
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .hamburger { display: flex; }
+        .contact-grid { grid-template-columns: 1fr; }
+        .venues-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+        .hero { text-align: center; min-height: auto; padding: 100px 0 60px; }
+        .hero-content { max-width: 100%; }
+        .hero-actions { justify-content: center; }
+        section { padding: 3rem 0; }
+        .services-grid, .talent-grid, .process-grid { gap: 1.2rem; }
+        .floating-buttons { bottom: 20px; right: 15px; gap: 8px; }
+        .floating-btn { width: 42px; height: 42px; font-size: 1.1rem; }
+        .back-to-top { bottom: 20px; left: 15px; width: 40px; height: 40px; }
+    }
+
+    @media (max-width: 480px) {
+        .container { padding: 0 1rem; }
+        h1 { font-size: 2rem; }
+        .btn-lg { padding: 0.8rem 1.8rem; font-size: 0.78rem; }
+        .services-grid { grid-template-columns: 1fr; }
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, var(--neon-cyan), var(--neon-magenta));
+        border-radius: 4px;
+    }
     </style>
 </head>
 <body>
@@ -786,21 +903,21 @@
 <div class="custom-cursor" id="customCursor"></div>
 
 <div id="splash">
-    <div class="splash-logo">INCRIFE<span>FAN</span></div>
-    <p class="splash-tagline">Comunidad oficial de fans</p>
+    <div class="splash-logo">NEXUS<span>NIGHT</span></div>
+    <p class="splash-tagline">Conectamos discotecas con el mejor talento · Barcelona</p>
     <div class="splash-loader"><div class="splash-loader-bar"></div></div>
 </div>
 
 <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-        <a href="#home" class="nav-logo">INCRIFE<span>FAN</span></a>
+    <div class="nav-inner container">
+        <a href="#home" class="nav-logo">NEXUS<span>NIGHT</span></a>
         <ul class="nav-links">
             <li><a href="#home">Inicio</a></li>
-            <li><a href="#news">Noticias</a></li>
-            <li><a href="#videos">Videoclips</a></li>
-            <li><a href="#collabs">Colaboraciones</a></li>
-            <li><a href="#gallery">Galería</a></li>
-            <li><a href="#contact" class="nav-cta">Únete</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#process">Cómo funciona</a></li>
+            <li><a href="#talent">Talento</a></li>
+            <li><a href="#venues">Venues</a></li>
+            <li><a href="#contact" class="nav-cta">Contacto</a></li>
         </ul>
         <div class="nav-actions">
             <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
@@ -816,144 +933,160 @@
 <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu-close" id="mobileClose">&times;</button>
     <a href="#home">Inicio</a>
-    <a href="#news">Noticias</a>
-    <a href="#videos">Videoclips</a>
-    <a href="#collabs">Colaboraciones</a>
-    <a href="#gallery">Galería</a>
-    <a href="#contact">Únete</a>
+    <a href="#services">Servicios</a>
+    <a href="#process">Cómo funciona</a>
+    <a href="#talent">Talento</a>
+    <a href="#venues">Venues</a>
+    <a href="#contact">Contacto</a>
 </div>
 
 <section class="hero" id="home">
     <div class="container">
         <div class="hero-content">
-            <h1>La comunidad oficial de <span class="gradient-neon">INCRIFE</span></h1>
-            <p class="hero-subtitle">Últimas noticias, videoclips, fotos y contenido exclusivo. Sé parte de la familia.</p>
+            <h1>Conectamos discotecas con el mejor <span class="gradient-neon">talento musical</span></h1>
+            <p class="hero-subtitle">Somos la promotora líder en Barcelona especializada en gestión de artistas para clubs y discotecas. Encuentra los mejores DJs y performers para tu venue, con comisiones totalmente transparentes.</p>
             <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary btn-lg">Unirme a la comunidad</a>
-                <a href="#videos" class="btn btn-outline btn-lg">Ver últimos videos</a>
+                <a href="#contact" class="btn btn-primary btn-lg">Solicitar DJs para mi discoteca</a>
+                <a href="#talent" class="btn btn-outline btn-lg">Ver talento disponible</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="news">
+<section id="services" class="bg-alt">
     <div class="container">
         <div class="section-header">
-            <p class="section-label">Noticias</p>
-            <h2>Últimas novedades</h2>
-            <p class="section-subtitle">Todo lo que pasa en el universo INCRIFE</p>
+            <p class="section-label">Servicios para discotecas</p>
+            <h2>Soluciones de booking profesional</h2>
+            <p class="section-subtitle">Te ayudamos a encontrar el artista perfecto para cada noche</p>
         </div>
-        <div class="news-grid">
-            <div class="news-card">
-                <h3>🎬 Nuevo videoclip: Maruu King - Soy de Coca</h3>
-                <p>Dirección y producción por INCRIFE. Ya disponible en YouTube. ¡No te lo pierdas!</p>
-                <a href="https://www.youtube.com/watch?v=vUhkd4jRlvU" target="_blank" class="btn btn-outline btn-sm">Ver videoclip</a>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Búsqueda de DJs</h3>
+                <p>Accede a nuestro catálogo de más de 50 artistas especializados en música electrónica, house, techno y comercial.</p>
+                <div class="service-card__commission">0% comisión</div>
+                <ul class="service-card__features">
+                    <li><i class="fas fa-check"></i> Búsqueda sin compromiso</li>
+                    <li><i class="fas fa-check"></i> Perfiles verificados</li>
+                    <li><i class="fas fa-check"></i> Demo reels y sets</li>
+                    <li><i class="fas fa-check"></i> Respuesta en 24h</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline btn-block">Buscar artistas</a>
             </div>
-            <div class="news-card">
-                <h3>🎵 Nueva música en camino</h3>
-                <p>INCRIFE está trabajando en nuevo material. Pronto más noticias.</p>
+            <div class="service-card service-card--featured">
+                <h3>Gestión de Reservas</h3>
+                <p>Externaliza toda la gestión de booking. Nos encargamos de la negociación, contratos y logística.</p>
+                <div class="service-card__commission">5% comisión</div>
+                <ul class="service-card__features">
+                    <li><i class="fas fa-check"></i> Negociación de cachés</li>
+                    <li><i class="fas fa-check"></i> Contratos profesionales</li>
+                    <li><i class="fas fa-check"></i> Gestión de riders técnicos</li>
+                    <li><i class="fas fa-check"></i> Coordinación de horarios</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary btn-block">Contratar gestión</a>
             </div>
-            <div class="news-card">
-                <h3>📸 Sesión fotográfica exclusiva</h3>
-                <p>Nuevas fotos de INCRIFE disponibles en Instagram. Síguele para verlas.</p>
-                <a href="https://www.instagram.com/incrife/" target="_blank" class="btn btn-outline btn-sm">Ver en Instagram</a>
+            <div class="service-card">
+                <h3>Talent Sourcing</h3>
+                <p>¿Buscas un perfil específico? Encontramos al artista ideal para tu concepto y público.</p>
+                <div class="service-card__commission">8% comisión</div>
+                <ul class="service-card__features">
+                    <li><i class="fas fa-check"></i> Búsqueda personalizada</li>
+                    <li><i class="fas fa-check"></i> Cásting profesional</li>
+                    <li><i class="fas fa-check"></i> Propuesta de lineups</li>
+                    <li><i class="fas fa-check"></i> Artist replacement garantizado</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline btn-block">Solicitar sourcing</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="videos" class="bg-alt">
+<section id="process">
     <div class="container">
         <div class="section-header">
-            <p class="section-label">Videoclips</p>
-            <h2>Producciones de INCRIFE</h2>
+            <p class="section-label">Cómo funciona</p>
+            <h2>Tres pasos para llenar tu discoteca</h2>
         </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <div class="portfolio-card__image">
-                    <img src="https://img.youtube.com/vi/vUhkd4jRlvU/maxresdefault.jpg" alt="Maruu King - Soy de Coca" loading="lazy">
-                    <div class="portfolio-card__overlay">
-                        <a href="https://www.youtube.com/watch?v=vUhkd4jRlvU" target="_blank" class="btn btn-primary btn-sm">Ver en YouTube</a>
-                    </div>
-                </div>
-                <div class="portfolio-card__body">
-                    <h3>Maruu King - Soy de Coca</h3>
-                    <p>Dirección y producción: INCRIFE · 2026</p>
-                </div>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-number">1</div>
+                <h3>Cuéntanos tu necesidad</h3>
+                <p>Rellena el formulario indicando fecha, estilo musical y presupuesto.</p>
             </div>
-            <div class="portfolio-card">
-                <div class="portfolio-card__image">
-                    <img src="https://raw.githubusercontent.com/incrife/incrife/main/SaveClip.App_670152063_18013529003844485_7891764818375528431_n.jpg" alt="Rafa 930" loading="lazy">
-                    <div class="portfolio-card__overlay">
-                        <a href="https://www.youtube.com/@incrife" target="_blank" class="btn btn-primary btn-sm">Ver canal</a>
-                    </div>
-                </div>
-                <div class="portfolio-card__body">
-                    <h3>Rafa 930 - Próximamente</h3>
-                    <p>Nuevo videoclip en producción</p>
-                </div>
+            <div class="process-card">
+                <div class="process-number">2</div>
+                <h3>Recibe propuestas</h3>
+                <p>Te enviamos perfiles de artistas que encajan con tu discoteca.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-number">3</div>
+                <h3>Confirmas y disfrutas</h3>
+                <p>Nos encargamos de todo. Tú solo preocúpate de que suene la música.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="collabs">
+<section id="talent" class="bg-alt">
     <div class="container">
         <div class="section-header">
-            <p class="section-label">Colaboradores</p>
-            <h2>Artistas y creadores</h2>
-            <p class="section-subtitle">Talento con el que INCRIFE ha trabajado</p>
+            <p class="section-label">Talento disponible</p>
+            <h2>Artistas que marcan la diferencia</h2>
+            <p class="section-subtitle">Profesionales verificados con experiencia en los mejores clubs de Barcelona</p>
         </div>
-        <div class="collab-grid">
-            <a href="https://www.instagram.com/rafa930_oficial/" target="_blank" class="collab-card" style="text-decoration:none;">
-                <h3>🎤 Rafa 930</h3>
-                <p>Artista musical · Visual Drill</p>
-                <span style="color:var(--accent-red-light);">@rafa930_oficial</span>
-            </a>
-            <a href="https://www.instagram.com/maruu_king/" target="_blank" class="collab-card" style="text-decoration:none;">
-                <h3>🎤 Maruu King</h3>
-                <p>Artista · Soy de Coca</p>
-                <span style="color:var(--accent-red-light);">@maruu_king</span>
-            </a>
-            <a href="https://www.instagram.com/therassam/" target="_blank" class="collab-card" style="text-decoration:none;">
-                <h3>🎤 Rassam</h3>
-                <p>Artista · KKK · Galou Meryoule</p>
-                <span style="color:var(--accent-red-light);">@therassam</span>
-            </a>
-            <a href="https://www.instagram.com/kurtusinc/" target="_blank" class="collab-card" style="text-decoration:none;">
-                <h3>📸 Kurtusinc Agency</h3>
-                <p>Agencia de modelos · +30 talentos</p>
-                <span style="color:var(--accent-red-light);">@kurtusinc</span>
-            </a>
+        <div class="talent-grid">
+            <div class="talent-card">
+                <i class="fas fa-headphones"></i>
+                <h3>DJs Residentes</h3>
+                <p>Más de 20 DJs con experiencia en clubs como Razzmatazz, INPUT y Sala Apolo.</p>
+            </div>
+            <div class="talent-card">
+                <i class="fas fa-microphone-alt"></i>
+                <h3>MC y Vocalistas</h3>
+                <p>Artistas que conectan con el público y elevan la energía de la pista.</p>
+            </div>
+            <div class="talent-card">
+                <i class="fas fa-drum"></i>
+                <h3>Live Performers</h3>
+                <p>Shows en vivo con baterías electrónicas, sintetizadores y percusión.</p>
+            </div>
+            <div class="talent-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>VJs</h3>
+                <p>Visuales sincronizados que transforman tu club en una experiencia inmersiva.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="gallery" class="bg-alt">
+<section id="venues">
     <div class="container">
         <div class="section-header">
-            <p class="section-label">Galería</p>
-            <h2>Fotografía profesional</h2>
+            <p class="section-label">Confían en nosotros</p>
+            <h2>Discotecas que ya trabajan con Nexus Night</h2>
         </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <div class="portfolio-card__image">
-                    <img src="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png" alt="INCRIFE Foto 1" loading="lazy">
+        <div class="venues-grid">
+            <div class="venue-card">
+                <div class="venue-card__image"><i class="fas fa-music"></i></div>
+                <div class="venue-card__body">
+                    <h3>Razzmatazz · Barcelona</h3>
+                    <p>Booking de DJs para sus sesiones de techno los viernes.</p>
                 </div>
             </div>
-            <div class="portfolio-card">
-                <div class="portfolio-card__image">
-                    <img src="https://raw.githubusercontent.com/incrife/incrife/main/SaveClip.App_616350453_18335348698209010_3207213954587758104_n.jpg" alt="Kingsla" loading="lazy">
+            <div class="venue-card">
+                <div class="venue-card__image"><i class="fas fa-bolt"></i></div>
+                <div class="venue-card__body">
+                    <h3>INPUT High Fidelity</h3>
+                    <p>Gestión completa de su lineup de artistas nacionales.</p>
                 </div>
             </div>
-            <div class="portfolio-card">
-                <div class="portfolio-card__image">
-                    <img src="https://raw.githubusercontent.com/incrife/incrife/main/P1013921.jpg" alt="Maruuking" loading="lazy">
+            <div class="venue-card">
+                <div class="venue-card__image"><i class="fas fa-star"></i></div>
+                <div class="venue-card__body">
+                    <h3>Sala Apolo</h3>
+                    <p>Talent sourcing para sus noches de electrónica.</p>
                 </div>
             </div>
-        </div>
-        <div style="text-align:center; margin-top: 2rem;">
-            <a href="https://www.instagram.com/incrife/" target="_blank" class="btn btn-outline">Ver más en Instagram <i class="fab fa-instagram"></i></a>
         </div>
     </div>
 </section>
@@ -961,212 +1094,207 @@
 <section id="contact" class="bg-alt">
     <div class="container">
         <div class="section-header">
-            <p class="section-label">Comunidad</p>
-            <h2>Únete a la familia INCRIFE</h2>
-            <p class="section-subtitle">Sigue a INCRIFE en todas sus redes y no te pierdas nada</p>
+            <p class="section-label">Contacto</p>
+            <h2>¿Quieres trabajar con nosotros?</h2>
+            <p class="section-subtitle">Cuéntanos qué necesitas y te enviaremos propuestas de artistas en menos de 24 horas</p>
         </div>
         <div class="contact-grid">
             <div class="contact-info">
                 <div class="contact-info-item">
-                    <div class="contact-info-icon"><i class="fab fa-instagram"></i></div>
-                    <div class="contact-info-text"><strong>Instagram Oficial</strong><p>@incrife</p></div>
+                    <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-info-text">
+                        <strong>Email profesional</strong>
+                        <p>booking@nexusnight.com</p>
+                    </div>
                 </div>
                 <div class="contact-info-item">
-                    <div class="contact-info-icon"><i class="fab fa-youtube"></i></div>
-                    <div class="contact-info-text"><strong>YouTube</strong><p>@incrife</p></div>
+                    <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-info-text">
+                        <strong>WhatsApp Booking</strong>
+                        <p>+34 671 59 18 14</p>
+                    </div>
                 </div>
                 <div class="contact-info-item">
-                    <div class="contact-info-icon"><i class="fab fa-tiktok"></i></div>
-                    <div class="contact-info-text"><strong>TikTok</strong><p>@incrife</p></div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="contact-info-icon"><i class="fab fa-spotify"></i></div>
-                    <div class="contact-info-text"><strong>Spotify</strong><p>INCRIFE</p></div>
-                </div>
-            </div>
-            <div class="contact-info" style="justify-content:center;">
-                <div class="contact-info-item" style="flex-direction:column; text-align:center;">
-                    <div class="contact-info-icon" style="margin:0 auto 1rem;"><i class="fas fa-users"></i></div>
-                    <div class="contact-info-text"><strong>Sé parte de la comunidad</strong><p>Sigue a INCRIFE y activa las notificaciones para no perderte ningún estreno.</p></div>
-                    <div style="display:flex; gap:1rem; margin-top:1rem; justify-content:center;">
-                        <a href="https://www.instagram.com/incrife/" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-instagram"></i> Seguir</a>
-                        <a href="https://www.youtube.com/@incrife" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-youtube"></i> Suscribirse</a>
+                    <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-info-text">
+                        <strong>Oficina central</strong>
+                        <p>Barcelona · Zona Eixample</p>
                     </div>
                 </div>
             </div>
+            <form class="contact-form" action="https://formspree.io/f/mrevlykr" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre del local / Discoteca" required>
+                <input type="email" name="email" placeholder="Email de contacto" required>
+                <input type="tel" name="telefono" placeholder="Teléfono">
+                <select name="servicio" required>
+                    <option value="">¿Qué necesitas?</option>
+                    <option value="buscar">Buscar DJs para una fecha</option>
+                    <option value="gestion">Gestión de reservas continuada</option>
+                    <option value="sourcing">Talent sourcing personalizado</option>
+                </select>
+                <textarea name="mensaje" rows="3" placeholder="Fecha aproximada, estilo musical, presupuesto..." required></textarea>
+                <button type="submit" class="btn btn-primary btn-block">Solicitar propuesta</button>
+            </form>
         </div>
     </div>
 </section>
 
 <footer class="footer">
     <div class="container">
-        <p>© 2026 INCRIFE FAN · Comunidad oficial de fans · <a href="https://incrife.com" target="_blank" style="color:var(--accent-red-light);">Web oficial</a></p>
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://www.instagram.com/incrife" target="_blank" rel="noopener noreferrer" aria-label="Instagram incrife"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@incrife" target="_blank" rel="noopener noreferrer" aria-label="TikTok incrife"><i class="fab fa-tiktok"></i></a>
+                <a href="https://twitter.com/incrife" target="_blank" rel="noopener noreferrer" aria-label="Twitter incrife"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/incrife" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn incrife"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>© 2025 NEXUS NIGHT · Promotora de Talentos para Discotecas · Barcelona</p>
+            <p style="font-size: 0.7rem;">Booking profesional · Comisiones transparentes · Resultados garantizados</p>
+        </div>
     </div>
 </footer>
 
 <div class="floating-buttons">
-    <a href="https://www.instagram.com/incrife/" target="_blank" rel="noopener" class="floating-btn" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
+    <a href="https://wa.me/34671591814?text=Hola%20NEXUS%20NIGHT,%20me%20interesa%20contratar%20DJs%20para%20mi%20discoteca" target="_blank" rel="noopener noreferrer" class="floating-btn" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
-    <a href="https://www.youtube.com/@incrife" target="_blank" rel="noopener" class="floating-btn" aria-label="YouTube">
-        <i class="fab fa-youtube"></i>
+    <a href="mailto:booking@nexusnight.com?subject=Booking%20para%20mi%20discoteca" class="floating-btn" aria-label="Email">
+        <i class="fas fa-envelope"></i>
     </a>
 </div>
 
 <button id="backToTop" class="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
 
 <script>
-    // Canvas de partículas / red
-    const canvas = document.getElementById('networkCanvas');
-    const ctx = canvas.getContext('2d');
-    let width, height;
-    let particles = [];
-    
-    function resizeCanvas() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width = width;
-        canvas.height = height;
-    }
-    
-    class Particle {
-        constructor() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
-            this.radius = Math.random() * 1.5;
-        }
-        update() {
-            this.x += this.vx;
-            this.y += this.vy;
-            if (this.x < 0) this.x = width;
-            if (this.x > width) this.x = 0;
-            if (this.y < 0) this.y = height;
-            if (this.y > height) this.y = 0;
-        }
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(204,0,0,0.3)';
-            ctx.fill();
-        }
-    }
-    
-    function initParticles() {
-        particles = [];
-        const count = Math.min(150, Math.floor(width * height / 8000));
-        for (let i = 0; i < count; i++) {
-            particles.push(new Particle());
-        }
-    }
-    
-    function drawLines() {
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                if (distance < 120) {
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(204,0,0,${0.05 * (1 - distance / 120)})`;
-                    ctx.stroke();
-                }
-            }
-        }
-    }
-    
-    function animate() {
-        if (!ctx) return;
-        ctx.clearRect(0, 0, width, height);
-        for (let p of particles) {
-            p.update();
-            p.draw();
-        }
-        drawLines();
-        requestAnimationFrame(animate);
-    }
-    
-    window.addEventListener('resize', () => {
-        resizeCanvas();
-        initParticles();
+    // ========== SPLASH SCREEN ==========
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('splash').classList.add('hidden');
+        }, 2200);
     });
-    resizeCanvas();
-    initParticles();
-    animate();
-    
-    // Custom Cursor
+
+    // ========== NAVBAR SCROLL ==========
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+    });
+
+    // ========== TEMA OSCURO/CLARO ==========
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') document.body.classList.add('light');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light');
+        localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    // ========== MENÚ MÓVIL ==========
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    hamburger.addEventListener('click', () => mobileMenu.classList.add('active'));
+    mobileClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+    });
+
+    // ========== BACK TO TOP ==========
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) backToTop.classList.add('visible');
+        else backToTop.classList.remove('visible');
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ========== CURSOR PERSONALIZADO ==========
     const cursor = document.getElementById('customCursor');
-    if (cursor && window.innerWidth > 768) {
+    if (window.matchMedia('(pointer: fine)').matches) {
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-        document.querySelectorAll('a, button, .btn, .service-card, .news-card, .collab-card, .portfolio-card').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        const interactiveElements = document.querySelectorAll('a, button, .btn, input, select, textarea');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
         });
     }
-    
-    // Splash Screen
-    const splash = document.getElementById('splash');
-    setTimeout(() => {
-        if (splash) splash.classList.add('hidden');
-    }, 1800);
-    
-    // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
+
+    // ========== CANVAS NETWORK (Partículas) ==========
+    const canvas = document.getElementById('networkCanvas');
+    const ctx = canvas.getContext('2d');
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let particles = [];
+    const PARTICLE_COUNT = 70;
+
+    function initCanvas() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        particles = [];
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 2 + 1,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.3,
+            });
+        }
     }
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'light') {
-                document.documentElement.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
+
+    function drawNetwork() {
+        if (!ctx) return;
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = '#00e5ff';
+        for (let p of particles) {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fill();
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0) p.x = width;
+            if (p.x > width) p.x = 0;
+            if (p.y < 0) p.y = height;
+            if (p.y > height) p.y = 0;
+        }
+        ctx.beginPath();
+        ctx.strokeStyle = 'rgba(0, 229, 255, 0.08)';
+        ctx.lineWidth = 0.5;
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 100) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(drawNetwork);
+    }
+
+    window.addEventListener('resize', () => {
+        initCanvas();
+    });
+    initCanvas();
+    drawNetwork();
+
+    // ========== SMOOTH SCROLL ==========
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
-    }
-    
-    // Mobile Menu
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileClose = document.getElementById('mobileClose');
-    
-    function closeMenu() {
-        if (mobileMenu) mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    }
-    if (mobileClose) mobileClose.addEventListener('click', closeMenu);
-    document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', closeMenu));
-    
-    // Back to Top
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-        if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 300);
-    });
-    if (backToTop) {
-        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    }
-    
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (navbar) navbar.style.backdropFilter = window.scrollY > 50 ? 'blur(20px)' : 'blur(20px)';
     });
 </script>
 </body>
