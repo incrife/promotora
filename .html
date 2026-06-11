@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>INCRIFE FAN | Comunidad Oficial · Contenido Exclusivo</title>
+    <meta name="description" content="INCRIFE Fan Page - Comunidad oficial de fans. Últimas noticias, fotos, videoclips y contenido exclusivo de INCRIFE. Únete a la comunidad.">
+    <meta name="theme-color" content="#cc0000">
+    <meta property="og:title" content="INCRIFE FAN | Comunidad Oficial">
+    <meta property="og:description" content="Comunidad oficial de fans de INCRIFE. Contenido exclusivo, noticias, fotos y videoclips.">
+    <meta property="og:url" content="https://incrife.com/fan">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="INCRIFE FAN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="INCRIFE FAN | Comunidad Oficial">
+    <meta name="twitter:description" content="Comunidad oficial de fans de INCRIFE. Contenido exclusivo y noticias.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png">
+    <link rel="canonical" href="https://incrife.com/fan">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(58).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* ========== RESET Y VARIABLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-primary: #06060e;
+            --bg-secondary: #0d0d1a;
+            --bg-card: #0f0f1a;
+            --bg-card-hover: #16162a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0c0;
+            --text-tertiary: #6b6b8d;
+            --border-color: rgba(255,255,255,0.08);
+            --accent-red: #cc0000;
+            --accent-red-light: #ff3333;
+            --accent-red-dark: #990000;
+            --shadow-red: 0 0 20px rgba(204,0,0,0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+        
+        [data-theme="light"] {
+            --bg-primary: #f5f5f7;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f0f0f5;
+            --text-primary: #0a0a0a;
+            --text-secondary: #333333;
+            --text-tertiary: #666666;
+            --border-color: rgba(0,0,0,0.1);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+            cursor: none;
+        }
+        
+        /* Custom Cursor */
+        .custom-cursor {
+            width: 28px;
+            height: 28px;
+            border: 2px solid var(--accent-red);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease;
+            backdrop-filter: invert(1);
+            transform: translate(-50%, -50%);
+        }
+        
+        .custom-cursor.hover {
+            width: 50px;
+            height: 50px;
+            background: rgba(204,0,0,0.15);
+            border-color: var(--accent-red-light);
+        }
+        
+        @media (max-width: 768px) {
+            .custom-cursor { display: none; }
+            body { cursor: auto; }
+        }
+        
+        /* Canvas Background */
+        #networkCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+        
+        /* Splash Screen */
+        #splash {
+            position: fixed;
+            inset: 0;
+            background: #06060e;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        
+        #splash.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .splash-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, var(--accent-red-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+        
+        .splash-logo span {
+            background: linear-gradient(135deg, var(--accent-red-light), #fff);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        
+        .splash-tagline {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+        
+        .splash-loader {
+            width: 120px;
+            height: 2px;
+            background: rgba(204,0,0,0.2);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .splash-loader-bar {
+            width: 0%;
+            height: 100%;
+            background: var(--accent-red);
+            animation: loaderBar 1.5s ease forwards;
+        }
+        
+        @keyframes loaderBar {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(6,6,14,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        [data-theme="light"] .navbar {
+            background: rgba(245,245,247,0.85);
+        }
+        
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 70px;
+        }
+        
+        .nav-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, var(--accent-red-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+        
+        .nav-logo span {
+            background: linear-gradient(135deg, var(--accent-red-light), #fff);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-red-light);
+        }
+        
+        .nav-cta {
+            background: var(--accent-red);
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            color: white !important;
+        }
+        
+        .nav-cta:hover {
+            background: var(--accent-red-dark);
+            transform: translateY(-2px);
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        /* Theme Toggle */
+        .theme-toggle {
+            width: 48px;
+            height: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5px;
+        }
+        
+        .ball {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            left: 3px;
+            transition: transform 0.3s ease;
+        }
+        
+        [data-theme="light"] .ball {
+            transform: translateX(24px);
+        }
+        
+        .icon-sun, .icon-moon {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            z-index: 1;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            width: 22px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: var(--transition);
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -280px;
+            width: 280px;
+            height: 100%;
+            background: var(--bg-primary);
+            z-index: 1001;
+            transition: right 0.3s ease;
+            padding: 5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            border-left: 1px solid var(--border-color);
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .mobile-menu-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background: var(--accent-red);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-red-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-red);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red-light);
+        }
+        
+        .btn-lg {
+            padding: 1rem 2.2rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn-sm {
+            padding: 0.4rem 1rem;
+            font-size: 0.7rem;
+        }
+        
+        /* Sections */
+        section {
+            padding: 6rem 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent-red-light);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        .section-subtitle {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 1rem auto 0;
+        }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .hero-content h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin-bottom: 1.5rem;
+        }
+        
+        .gradient-neon {
+            background: linear-gradient(135deg, #fff, var(--accent-red-light), #ff6666);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero-subtitle {
+            color: var(--text-secondary);
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Cards Grid */
+        .services-grid, .news-grid, .collab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .service-card, .news-card, .collab-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover, .news-card:hover, .collab-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-red);
+            box-shadow: var(--shadow-red);
+        }
+        
+        .service-card h3, .news-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .service-card p, .news-card p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card__price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent-red-light);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card__features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card__features li {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .service-card__features li i {
+            color: var(--accent-red-light);
+            font-size: 0.7rem;
+        }
+        
+        .btn-block {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        /* Process */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .process-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+        }
+        
+        .process-number {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1rem;
+        }
+        
+        /* IA Grid */
+        .ia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .ia-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .ia-card i {
+            font-size: 2rem;
+            color: var(--accent-red-light);
+            margin-bottom: 1rem;
+        }
+        
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .portfolio-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-red);
+        }
+        
+        .portfolio-card__image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .portfolio-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-card:hover .portfolio-card__image img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-card__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .portfolio-card:hover .portfolio-card__overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-card__body {
+            padding: 1.5rem;
+        }
+        
+        .portfolio-card__body h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .portfolio-card__body p {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-btn-side {
+            display: inline-flex;
+        }
+        
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .contact-info-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(204,0,0,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent-red-light);
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-form input, .contact-form select, .contact-form textarea {
+            padding: 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-tertiary);
+            font-size: 0.8rem;
+        }
+        
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 99;
+        }
+        
+        .floating-btn {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+            background: var(--accent-red-dark);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 45px;
+            height: 45px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--accent-red);
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .hero-actions { flex-direction: column; align-items: center; }
+            .btn { width: 100%; justify-content: center; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            section { padding: 4rem 0; }
+            .container { padding: 0 1.2rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.8rem; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="networkCanvas"></canvas>
+<div class="custom-cursor" id="customCursor"></div>
+
+<div id="splash">
+    <div class="splash-logo">INCRIFE<span>FAN</span></div>
+    <p class="splash-tagline">Comunidad oficial de fans</p>
+    <div class="splash-loader"><div class="splash-loader-bar"></div></div>
+</div>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <a href="#home" class="nav-logo">INCRIFE<span>FAN</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#news">Noticias</a></li>
+            <li><a href="#videos">Videoclips</a></li>
+            <li><a href="#collabs">Colaboraciones</a></li>
+            <li><a href="#gallery">Galería</a></li>
+            <li><a href="#contact" class="nav-cta">Únete</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                <span class="ball"></span>
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileClose">&times;</button>
+    <a href="#home">Inicio</a>
+    <a href="#news">Noticias</a>
+    <a href="#videos">Videoclips</a>
+    <a href="#collabs">Colaboraciones</a>
+    <a href="#gallery">Galería</a>
+    <a href="#contact">Únete</a>
+</div>
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h1>La comunidad oficial de <span class="gradient-neon">INCRIFE</span></h1>
+            <p class="hero-subtitle">Últimas noticias, videoclips, fotos y contenido exclusivo. Sé parte de la familia.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary btn-lg">Unirme a la comunidad</a>
+                <a href="#videos" class="btn btn-outline btn-lg">Ver últimos videos</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="news">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Noticias</p>
+            <h2>Últimas novedades</h2>
+            <p class="section-subtitle">Todo lo que pasa en el universo INCRIFE</p>
+        </div>
+        <div class="news-grid">
+            <div class="news-card">
+                <h3>🎬 Nuevo videoclip: Maruu King - Soy de Coca</h3>
+                <p>Dirección y producción por INCRIFE. Ya disponible en YouTube. ¡No te lo pierdas!</p>
+                <a href="https://www.youtube.com/watch?v=vUhkd4jRlvU" target="_blank" class="btn btn-outline btn-sm">Ver videoclip</a>
+            </div>
+            <div class="news-card">
+                <h3>🎵 Nueva música en camino</h3>
+                <p>INCRIFE está trabajando en nuevo material. Pronto más noticias.</p>
+            </div>
+            <div class="news-card">
+                <h3>📸 Sesión fotográfica exclusiva</h3>
+                <p>Nuevas fotos de INCRIFE disponibles en Instagram. Síguele para verlas.</p>
+                <a href="https://www.instagram.com/incrife/" target="_blank" class="btn btn-outline btn-sm">Ver en Instagram</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="videos" class="bg-alt">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Videoclips</p>
+            <h2>Producciones de INCRIFE</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="https://img.youtube.com/vi/vUhkd4jRlvU/maxresdefault.jpg" alt="Maruu King - Soy de Coca" loading="lazy">
+                    <div class="portfolio-card__overlay">
+                        <a href="https://www.youtube.com/watch?v=vUhkd4jRlvU" target="_blank" class="btn btn-primary btn-sm">Ver en YouTube</a>
+                    </div>
+                </div>
+                <div class="portfolio-card__body">
+                    <h3>Maruu King - Soy de Coca</h3>
+                    <p>Dirección y producción: INCRIFE · 2026</p>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="https://raw.githubusercontent.com/incrife/incrife/main/SaveClip.App_670152063_18013529003844485_7891764818375528431_n.jpg" alt="Rafa 930" loading="lazy">
+                    <div class="portfolio-card__overlay">
+                        <a href="https://www.youtube.com/@incrife" target="_blank" class="btn btn-primary btn-sm">Ver canal</a>
+                    </div>
+                </div>
+                <div class="portfolio-card__body">
+                    <h3>Rafa 930 - Próximamente</h3>
+                    <p>Nuevo videoclip en producción</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="collabs">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Colaboradores</p>
+            <h2>Artistas y creadores</h2>
+            <p class="section-subtitle">Talento con el que INCRIFE ha trabajado</p>
+        </div>
+        <div class="collab-grid">
+            <a href="https://www.instagram.com/rafa930_oficial/" target="_blank" class="collab-card" style="text-decoration:none;">
+                <h3>🎤 Rafa 930</h3>
+                <p>Artista musical · Visual Drill</p>
+                <span style="color:var(--accent-red-light);">@rafa930_oficial</span>
+            </a>
+            <a href="https://www.instagram.com/maruu_king/" target="_blank" class="collab-card" style="text-decoration:none;">
+                <h3>🎤 Maruu King</h3>
+                <p>Artista · Soy de Coca</p>
+                <span style="color:var(--accent-red-light);">@maruu_king</span>
+            </a>
+            <a href="https://www.instagram.com/therassam/" target="_blank" class="collab-card" style="text-decoration:none;">
+                <h3>🎤 Rassam</h3>
+                <p>Artista · KKK · Galou Meryoule</p>
+                <span style="color:var(--accent-red-light);">@therassam</span>
+            </a>
+            <a href="https://www.instagram.com/kurtusinc/" target="_blank" class="collab-card" style="text-decoration:none;">
+                <h3>📸 Kurtusinc Agency</h3>
+                <p>Agencia de modelos · +30 talentos</p>
+                <span style="color:var(--accent-red-light);">@kurtusinc</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="bg-alt">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Galería</p>
+            <h2>Fotografía profesional</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png" alt="INCRIFE Foto 1" loading="lazy">
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="https://raw.githubusercontent.com/incrife/incrife/main/SaveClip.App_616350453_18335348698209010_3207213954587758104_n.jpg" alt="Kingsla" loading="lazy">
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="https://raw.githubusercontent.com/incrife/incrife/main/P1013921.jpg" alt="Maruuking" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top: 2rem;">
+            <a href="https://www.instagram.com/incrife/" target="_blank" class="btn btn-outline">Ver más en Instagram <i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="bg-alt">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Comunidad</p>
+            <h2>Únete a la familia INCRIFE</h2>
+            <p class="section-subtitle">Sigue a INCRIFE en todas sus redes y no te pierdas nada</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fab fa-instagram"></i></div>
+                    <div class="contact-info-text"><strong>Instagram Oficial</strong><p>@incrife</p></div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fab fa-youtube"></i></div>
+                    <div class="contact-info-text"><strong>YouTube</strong><p>@incrife</p></div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fab fa-tiktok"></i></div>
+                    <div class="contact-info-text"><strong>TikTok</strong><p>@incrife</p></div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fab fa-spotify"></i></div>
+                    <div class="contact-info-text"><strong>Spotify</strong><p>INCRIFE</p></div>
+                </div>
+            </div>
+            <div class="contact-info" style="justify-content:center;">
+                <div class="contact-info-item" style="flex-direction:column; text-align:center;">
+                    <div class="contact-info-icon" style="margin:0 auto 1rem;"><i class="fas fa-users"></i></div>
+                    <div class="contact-info-text"><strong>Sé parte de la comunidad</strong><p>Sigue a INCRIFE y activa las notificaciones para no perderte ningún estreno.</p></div>
+                    <div style="display:flex; gap:1rem; margin-top:1rem; justify-content:center;">
+                        <a href="https://www.instagram.com/incrife/" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-instagram"></i> Seguir</a>
+                        <a href="https://www.youtube.com/@incrife" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-youtube"></i> Suscribirse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 INCRIFE FAN · Comunidad oficial de fans · <a href="https://incrife.com" target="_blank" style="color:var(--accent-red-light);">Web oficial</a></p>
+    </div>
+</footer>
+
+<div class="floating-buttons">
+    <a href="https://www.instagram.com/incrife/" target="_blank" rel="noopener" class="floating-btn" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/@incrife" target="_blank" rel="noopener" class="floating-btn" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+
+<button id="backToTop" class="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+    // Canvas de partículas / red
+    const canvas = document.getElementById('networkCanvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    
+    function resizeCanvas() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+    
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.radius = Math.random() * 1.5;
+        }
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0) this.x = width;
+            if (this.x > width) this.x = 0;
+            if (this.y < 0) this.y = height;
+            if (this.y > height) this.y = 0;
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(204,0,0,0.3)';
+            ctx.fill();
+        }
+    }
+    
+    function initParticles() {
+        particles = [];
+        const count = Math.min(150, Math.floor(width * height / 8000));
+        for (let i = 0; i < count; i++) {
+            particles.push(new Particle());
+        }
+    }
+    
+    function drawLines() {
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(204,0,0,${0.05 * (1 - distance / 120)})`;
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+    
+    function animate() {
+        if (!ctx) return;
+        ctx.clearRect(0, 0, width, height);
+        for (let p of particles) {
+            p.update();
+            p.draw();
+        }
+        drawLines();
+        requestAnimationFrame(animate);
+    }
+    
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+        initParticles();
+    });
+    resizeCanvas();
+    initParticles();
+    animate();
+    
+    // Custom Cursor
+    const cursor = document.getElementById('customCursor');
+    if (cursor && window.innerWidth > 768) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, button, .btn, .service-card, .news-card, .collab-card, .portfolio-card').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+    }
+    
+    // Splash Screen
+    const splash = document.getElementById('splash');
+    setTimeout(() => {
+        if (splash) splash.classList.add('hidden');
+    }, 1800);
+    
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'light') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+    
+    // Mobile Menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    
+    function closeMenu() {
+        if (mobileMenu) mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', closeMenu));
+    
+    // Back to Top
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 300);
+    });
+    if (backToTop) {
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+    
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (navbar) navbar.style.backdropFilter = window.scrollY > 50 ? 'blur(20px)' : 'blur(20px)';
+    });
+</script>
+</body>
+</html>
