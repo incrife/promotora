@@ -2,14 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>NEXUS NIGHT | Venta de Entradas para Discotecas · Promotora Barcelona</title>
     <meta name="description" content="NEXUS NIGHT: Vende entradas para tu discoteca en Barcelona. Te conseguimos público, modelos para publicidad y gestionamos tus eventos. Comisión por entrada vendida. ¡Multiplica tus reservas!">
-    <meta name="keywords" content="venta entradas discotecas barcelona, promotora fiestas barcelona, modelos publicidad discotecas, organizacion eventos noche barcelona, ticketing discotecas, comision entradas">
+    <meta name="keywords" content="venta entradas discotecas barcelona, promotora fiestas barcelona, modelos publicidad discotecas, organizacion eventos noche barcelona, ticketing discotecas, comision entradas, nexus night, incrife">
+    <meta name="author" content="INCRIFE">
     <meta name="theme-color" content="#0a0a1a">
+    <meta name="google-site-verification" content="ORKkoc8jQiBmo_5xJ0rKGtWSjJtDXvMg4E2Dvq4I9No" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="NEXUS NIGHT | Vende más entradas para tu discoteca">
     <meta property="og:description" content="Multiplica la afluencia de tu discoteca. Venta de entradas a comisión + modelos promocionales. Especialistas en Barcelona.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nexusnight.com">
+    <meta property="og:image" content="https://nexusnight.com/images/og-image.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NEXUS NIGHT | Venta de Entradas para Discotecas">
+    <meta name="twitter:description" content="Vendemos tus entradas, tú pagas comisión. Modelos promocionales incluidos. Barcelona.">
+    
+    <!-- Canonical -->
     <link rel="canonical" href="https://nexusnight.com">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎟️</text></svg>">
     
@@ -30,12 +43,15 @@
       "alternateName": "Nexus Night Promotora Barcelona",
       "description": "Venta de entradas para discotecas en Barcelona. Promotora de fiestas, gestión de aforo y modelos promocionales. Comisión por entrada vendida.",
       "url": "https://nexusnight.com",
+      "founder": {
+        "@type": "Person",
+        "name": "INCRIFE"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Barcelona",
         "addressRegion": "Barcelona",
         "postalCode": "08001",
-        "streetAddress": "Rambla de Catalunya",
         "addressCountry": "ES"
       },
       "geo": {
@@ -45,7 +61,7 @@
       },
       "telephone": "+34 671 59 18 14",
       "email": "ventas@nexusnight.com",
-      "priceRange": "Comisión por entrada",
+      "priceRange": "10%-15% comisión",
       "sameAs": [
         "https://www.instagram.com/incrife",
         "https://www.tiktok.com/@incrife",
@@ -60,8 +76,10 @@
 
     <style>
     /* ============================================
-       NEXUS NIGHT - NEGRO MORADO OSCURO + NEONES
+       NEXUS NIGHT - RESPONSIVE COMPLETO
+       Negro morado oscuro + neones
        Venta de entradas a comisión · Modelos promo
+       INCRIFE Owners
        ============================================ */
 
     :root {
@@ -72,7 +90,6 @@
         --neon-pink-dark: #db2777;
         --neon-pink-glow: #fbcfe8;
         --neon-cyan: #22d3ee;
-        --neon-cyan-dark: #06b6d4;
         --bg: #05050a;
         --bg-alt: #0a0a14;
         --bg-card: #0f0f1a;
@@ -115,6 +132,7 @@
         color: var(--text);
         line-height: 1.7;
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
     }
 
@@ -131,7 +149,8 @@
     }
 
     .container {
-        max-width: 1140px;
+        width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0 1.5rem;
     }
@@ -154,15 +173,19 @@
     }
 
     h1 {
-        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-size: clamp(2.2rem, 5vw, 4rem);
     }
 
     h2 {
-        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+        font-size: clamp(1.6rem, 3.5vw, 2.6rem);
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    p {
+        font-size: clamp(0.85rem, 2vw, 1rem);
     }
 
     .gradient-neon {
@@ -174,12 +197,12 @@
 
     .section-header {
         text-align: center;
-        margin-bottom: 3.5rem;
+        margin-bottom: clamp(2rem, 5vw, 3.5rem);
     }
 
     .section-label {
         display: inline-block;
-        font-size: 0.7rem;
+        font-size: clamp(0.6rem, 2vw, 0.7rem);
         font-weight: 700;
         letter-spacing: 5px;
         text-transform: uppercase;
@@ -193,7 +216,7 @@
 
     .section-subtitle {
         color: var(--text-secondary);
-        font-size: 1rem;
+        font-size: clamp(0.85rem, 2.5vw, 1rem);
         max-width: 600px;
         margin: 0.8rem auto 0;
     }
@@ -236,12 +259,13 @@
 
     .splash-tagline {
         color: rgba(255,255,255,0.6);
-        font-size: 0.75rem;
+        font-size: clamp(0.6rem, 3vw, 0.75rem);
         letter-spacing: 4px;
         margin-top: 1rem;
         text-transform: uppercase;
         animation: fadeInUp 0.8s ease 0.6s forwards;
         opacity: 0;
+        text-align: center;
     }
 
     .splash-loader {
@@ -287,6 +311,7 @@
         z-index: 1000;
         background: rgba(5,5,10,0.95);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--border);
         transition: var(--transition);
     }
@@ -305,7 +330,7 @@
 
     .nav-logo {
         font-family: var(--font-display);
-        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
         font-weight: 800;
         color: var(--text);
         text-decoration: none;
@@ -320,14 +345,14 @@
 
     .nav-links {
         display: flex;
-        gap: 2rem;
+        gap: clamp(1rem, 3vw, 2rem);
         list-style: none;
     }
 
     .nav-links a {
         color: var(--text-secondary);
         text-decoration: none;
-        font-size: 0.75rem;
+        font-size: clamp(0.65rem, 2vw, 0.75rem);
         font-weight: 600;
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -382,17 +407,19 @@
     .hamburger {
         display: none;
         flex-direction: column;
-        gap: 4px;
+        gap: 5px;
         background: none;
         border: none;
         cursor: pointer;
+        padding: 10px;
     }
 
     .hamburger span {
-        width: 20px;
+        width: 24px;
         height: 2px;
         background: var(--text);
         border-radius: 2px;
+        transition: 0.2s;
     }
 
     .mobile-menu {
@@ -419,6 +446,7 @@
         font-weight: 700;
         color: var(--text);
         text-decoration: none;
+        padding: 0.5rem;
     }
 
     .mobile-menu-close {
@@ -437,8 +465,8 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        padding: 0.8rem 1.8rem;
-        font-size: 0.8rem;
+        padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.2rem, 4vw, 1.8rem);
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
         font-weight: 700;
         text-transform: uppercase;
         border-radius: var(--radius-full);
@@ -446,6 +474,8 @@
         text-decoration: none;
         cursor: pointer;
         border: none;
+        text-align: center;
+        justify-content: center;
     }
 
     .btn-primary {
@@ -472,13 +502,11 @@
     }
 
     .btn-lg {
-        padding: 1rem 2.4rem;
-        font-size: 0.85rem;
+        padding: clamp(0.8rem, 2.5vw, 1rem) clamp(1.8rem, 5vw, 2.4rem);
     }
 
     .btn-block {
         width: 100%;
-        justify-content: center;
     }
 
     /* HERO */
@@ -511,7 +539,7 @@
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
         color: var(--text-secondary);
         margin-bottom: 2rem;
         line-height: 1.8;
@@ -523,10 +551,60 @@
         flex-wrap: wrap;
     }
 
-    /* SERVICIOS - COMISIONES */
+    /* OWNERS - SECCIÓN INCRIFE */
+    .owners-section {
+        text-align: center;
+        padding: 2rem 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        margin: 1rem 0;
+    }
+
+    .owners-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .owners-avatar {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: #fff;
+    }
+
+    .owners-text h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .owners-text p {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+    }
+
+    .owners-social a {
+        color: var(--neon-purple);
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+        transition: color 0.3s;
+    }
+
+    .owners-social a:hover {
+        color: var(--neon-pink);
+    }
+
+    /* SERVICIOS */
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1.8rem;
     }
 
@@ -534,7 +612,7 @@
         background: var(--bg-card);
         border: 1px solid var(--border);
         border-radius: var(--radius-lg);
-        padding: 2rem;
+        padding: clamp(1.5rem, 4vw, 2rem);
         transition: var(--transition);
         position: relative;
         overflow: hidden;
@@ -568,7 +646,7 @@
     }
 
     .service-card__commission {
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
         font-weight: 800;
         font-family: var(--font-display);
         background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
@@ -588,7 +666,7 @@
         align-items: center;
         gap: 0.5rem;
         margin-bottom: 0.6rem;
-        font-size: 0.85rem;
+        font-size: clamp(0.75rem, 2vw, 0.85rem);
         color: var(--text-secondary);
     }
 
@@ -600,7 +678,7 @@
     /* MODELOS */
     .models-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1.5rem;
     }
 
@@ -608,7 +686,7 @@
         background: var(--bg-card);
         border: 1px solid var(--border);
         border-radius: var(--radius-lg);
-        padding: 1.8rem;
+        padding: clamp(1.2rem, 3vw, 1.8rem);
         text-align: center;
         transition: var(--transition);
     }
@@ -620,7 +698,7 @@
     }
 
     .model-card i {
-        font-size: 2.5rem;
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
         background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
         -webkit-background-clip: text;
         background-clip: text;
@@ -629,35 +707,35 @@
     }
 
     .model-card h3 {
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
         margin-bottom: 0.3rem;
     }
 
     .model-card p {
-        font-size: 0.8rem;
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
         color: var(--text-muted);
     }
 
     /* PROCESO */
     .process-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1.5rem;
     }
 
     .process-card {
         text-align: center;
-        padding: 1.5rem;
+        padding: clamp(1rem, 3vw, 1.5rem);
     }
 
     .process-number {
-        width: 60px;
-        height: 60px;
+        width: clamp(50px, 10vw, 60px);
+        height: clamp(50px, 10vw, 60px);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 3vw, 1.4rem);
         font-weight: 800;
         margin: 0 auto 1rem;
         background: linear-gradient(135deg, var(--neon-purple-dark), var(--neon-pink-dark));
@@ -665,10 +743,10 @@
         box-shadow: 0 0 20px rgba(192,132,252,0.4);
     }
 
-    /* POR QUÉ NOSOTROS */
+    /* STATS */
     .stats-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 1.5rem;
         text-align: center;
     }
@@ -677,11 +755,11 @@
         background: var(--bg-card);
         border: 1px solid var(--border);
         border-radius: var(--radius-lg);
-        padding: 1.8rem;
+        padding: clamp(1.2rem, 3vw, 1.8rem);
     }
 
     .stat-number {
-        font-size: 2.5rem;
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
         font-weight: 800;
         background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
         -webkit-background-clip: text;
@@ -692,7 +770,7 @@
     /* CONTACTO */
     .contact-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 2.5rem;
     }
 
@@ -700,20 +778,21 @@
         background: var(--bg-card);
         border: 1px solid var(--border);
         border-radius: var(--radius-lg);
-        padding: 2rem;
+        padding: clamp(1.5rem, 4vw, 2rem);
     }
 
     .contact-form input,
     .contact-form textarea,
     .contact-form select {
         width: 100%;
-        padding: 0.8rem 1rem;
+        padding: clamp(0.6rem, 2vw, 0.8rem) clamp(0.8rem, 2vw, 1rem);
         margin-bottom: 0.8rem;
         border: 1px solid var(--border);
         border-radius: var(--radius-sm);
         background: var(--bg);
         color: var(--text);
         font-family: var(--font-body);
+        font-size: clamp(0.8rem, 2vw, 0.88rem);
     }
 
     .contact-form input:focus,
@@ -733,7 +812,7 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        padding: 1.2rem;
+        padding: clamp(0.8rem, 2vw, 1.2rem);
         background: var(--bg-card);
         border: 1px solid var(--border);
         border-radius: var(--radius-md);
@@ -745,20 +824,21 @@
     }
 
     .contact-info-icon {
-        width: 48px;
-        height: 48px;
+        width: clamp(40px, 8vw, 48px);
+        height: clamp(40px, 8vw, 48px);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         background: linear-gradient(135deg, var(--neon-purple-dark), var(--neon-pink-dark));
         color: #fff;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        flex-shrink: 0;
     }
 
     .contact-info-text strong {
         display: block;
-        font-size: 0.7rem;
+        font-size: clamp(0.6rem, 2vw, 0.7rem);
         text-transform: uppercase;
         letter-spacing: 2px;
         color: var(--text-muted);
@@ -777,16 +857,21 @@
         gap: 1.5rem;
         justify-content: center;
         margin-bottom: 1rem;
+        flex-wrap: wrap;
     }
 
     .footer-social a {
         color: var(--text-secondary);
-        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
         transition: color 0.3s;
     }
 
     .footer-social a:hover {
         color: var(--neon-purple);
+    }
+
+    .footer p {
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
     }
 
     /* BOTONES FLOTANTES */
@@ -801,15 +886,15 @@
     }
 
     .floating-btn {
-        width: 50px;
-        height: 50px;
+        width: clamp(42px, 10vw, 50px);
+        height: clamp(42px, 10vw, 50px);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         background: linear-gradient(135deg, var(--neon-purple-dark), var(--neon-pink-dark));
         color: #fff;
-        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
         text-decoration: none;
         box-shadow: 0 0 20px rgba(192,132,252,0.4);
         transition: transform 0.3s;
@@ -823,8 +908,8 @@
         position: fixed;
         bottom: 25px;
         left: 25px;
-        width: 46px;
-        height: 46px;
+        width: clamp(40px, 8vw, 46px);
+        height: clamp(40px, 8vw, 46px);
         border-radius: 50%;
         background: linear-gradient(135deg, var(--neon-purple-dark), var(--neon-pink-dark));
         color: #fff;
@@ -877,30 +962,13 @@
         .custom-cursor { display: none; }
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-        .services-grid, .models-grid, .process-grid, .stats-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+        width: 6px;
     }
-
-    @media (max-width: 768px) {
-        .nav-links { display: none; }
-        .hamburger { display: flex; }
-        .contact-grid { grid-template-columns: 1fr; }
-        .hero { text-align: center; padding: 100px 0 60px; min-height: auto; }
-        .hero-content { max-width: 100%; }
-        .hero-actions { justify-content: center; }
-        .services-grid, .models-grid, .process-grid, .stats-grid {
-            grid-template-columns: 1fr;
-            max-width: 380px;
-            margin: 0 auto;
-        }
-        section { padding: 3rem 0; }
+    ::-webkit-scrollbar-track {
+        background: var(--bg);
     }
-
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb {
         background: linear-gradient(180deg, var(--neon-purple), var(--neon-pink));
         border-radius: 3px;
@@ -963,6 +1031,26 @@
         </div>
     </div>
 </section>
+
+<!-- SECCIÓN OWNERS - INCRIFE (justo debajo del hero) -->
+<div class="owners-section">
+    <div class="container">
+        <div class="owners-content">
+            <div class="owners-avatar">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="owners-text">
+                <h3>INCRIFE <span style="color: var(--neon-purple);">●</span> Founder</h3>
+                <p>Especialista en ticketing y promoción de discotecas en Barcelona</p>
+            </div>
+            <div class="owners-social">
+                <a href="https://www.instagram.com/incrife" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@incrife" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://twitter.com/incrife" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- SERVICIOS DE VENTA DE ENTRADAS -->
 <section id="services" class="bg-alt">
@@ -1163,7 +1251,7 @@
             <a href="https://twitter.com/incrife" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
         <p>© 2025 NEXUS NIGHT · Venta de entradas para discotecas · Barcelona</p>
-        <p style="font-size: 0.7rem; margin-top: 0.5rem;">Pagas sólo por resultados · Comisión por entrada vendida · Modelos promocionales</p>
+        <p style="font-size: clamp(0.6rem, 2vw, 0.7rem); margin-top: 0.5rem;">Pagas sólo por resultados · Comisión por entrada vendida · Modelos promocionales · Fundado por INCRIFE</p>
     </div>
 </footer>
 
@@ -1213,7 +1301,7 @@
     });
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // Custom cursor
+    // Custom cursor (solo en dispositivos con mouse)
     const cursor = document.getElementById('customCursor');
     if (window.matchMedia('(pointer: fine)').matches) {
         document.addEventListener('mousemove', (e) => {
@@ -1281,7 +1369,9 @@
         requestAnimationFrame(draw);
     }
 
-    window.addEventListener('resize', initCanvas);
+    window.addEventListener('resize', () => {
+        initCanvas();
+    });
     initCanvas();
     draw();
 
