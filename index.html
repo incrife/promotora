@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
 
-    <!-- VERIFICACIÓN GOOGLE (la que pediste) -->
+    <!-- VERIFICACIÓN GOOGLE -->
     <meta name="google-site-verification" content="TjB9SWFveZH2qDINHyNkW0yyU_JO_W9-3o5xTpqtTtQ" />
 
     <title>NEXUS NIGHT · Venta de Entradas para Discotecas en Barcelona</title>
@@ -36,7 +36,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <!-- Schema.org para negocio local Barcelona -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -79,9 +79,6 @@
     <style>
         /* ============================================
            NEXUS NIGHT - RESPONSIVE COMPLETO
-           Negro morado oscuro + neones
-           Venta de entradas a comisión · Modelos promo
-           INCRIFE Owners
            ============================================ */
 
         :root {
@@ -177,15 +174,12 @@
         h1 {
             font-size: clamp(2.2rem, 5vw, 4rem);
         }
-
         h2 {
             font-size: clamp(1.6rem, 3.5vw, 2.6rem);
         }
-
         h3 {
             font-size: clamp(1rem, 2vw, 1.2rem);
         }
-
         p {
             font-size: clamp(0.85rem, 2vw, 1rem);
         }
@@ -235,13 +229,11 @@
             flex-direction: column;
             transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), visibility 0.8s ease;
         }
-
         #splash.hidden {
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
         }
-
         .splash-logo {
             font-family: var(--font-display);
             font-size: clamp(2rem, 10vw, 4rem);
@@ -251,14 +243,12 @@
             animation: neonPulse 2s ease-in-out infinite, floatLogo 1.5s ease-out;
             text-align: center;
         }
-
         .splash-logo span {
             background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .splash-tagline {
             color: rgba(255,255,255,0.6);
             font-size: clamp(0.6rem, 3vw, 0.75rem);
@@ -269,7 +259,6 @@
             opacity: 0;
             text-align: center;
         }
-
         .splash-loader {
             width: min(200px, 70vw);
             height: 2px;
@@ -278,7 +267,6 @@
             margin-top: 2rem;
             overflow: hidden;
         }
-
         .splash-loader-bar {
             height: 100%;
             background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink), var(--neon-purple));
@@ -291,17 +279,14 @@
             0%, 100% { text-shadow: 0 0 30px var(--neon-purple), 0 0 60px var(--neon-pink); }
             50% { text-shadow: 0 0 50px var(--neon-purple), 0 0 90px var(--neon-pink), 0 0 120px var(--neon-purple-glow); }
         }
-
         @keyframes floatLogo {
             0% { opacity: 0; transform: scale(0.8) translateY(20px); }
             100% { opacity: 1; transform: scale(1) translateY(0); }
         }
-
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes loading { to { width: 100%; } }
 
         /* NAVBAR */
@@ -317,19 +302,16 @@
             border-bottom: 1px solid var(--border);
             transition: var(--transition);
         }
-
         .navbar.scrolled {
             box-shadow: 0 0 25px rgba(192,132,252,0.2);
             border-bottom-color: var(--neon-purple);
         }
-
         .nav-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 68px;
         }
-
         .nav-logo {
             font-family: var(--font-display);
             font-size: clamp(1.1rem, 4vw, 1.3rem);
@@ -337,20 +319,17 @@
             color: var(--text);
             text-decoration: none;
         }
-
         .nav-logo span {
             background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .nav-links {
             display: flex;
             gap: clamp(1rem, 3vw, 2rem);
             list-style: none;
         }
-
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
@@ -360,11 +339,9 @@
             text-transform: uppercase;
             transition: color 0.2s;
         }
-
         .nav-links a:hover {
             color: var(--neon-purple);
         }
-
         .nav-cta {
             background: linear-gradient(135deg, var(--neon-purple-dark), var(--neon-pink-dark));
             color: #fff !important;
@@ -374,13 +351,11 @@
             text-transform: none;
             box-shadow: 0 0 20px rgba(192,132,252,0.3);
         }
-
         .nav-actions {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-
         .theme-toggle {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -390,7 +365,6 @@
             cursor: pointer;
             position: relative;
         }
-
         .theme-toggle .ball {
             position: absolute;
             width: 22px;
@@ -401,11 +375,9 @@
             left: 3px;
             transition: left 0.3s;
         }
-
         body.light .theme-toggle .ball {
             left: 27px;
         }
-
         .hamburger {
             display: none;
             flex-direction: column;
@@ -415,7 +387,6 @@
             cursor: pointer;
             padding: 10px;
         }
-
         .hamburger span {
             width: 24px;
             height: 2px;
@@ -423,7 +394,6 @@
             border-radius: 2px;
             transition: 0.2s;
         }
-
         .mobile-menu {
             display: none;
             position: fixed;
@@ -437,12 +407,10 @@
             transform: translateY(-100%);
             transition: transform 0.4s;
         }
-
         .mobile-menu.active {
             transform: translateY(0);
             display: flex;
         }
-
         .mobile-menu a {
             font-size: 1.3rem;
             font-weight: 700;
@@ -450,7 +418,6 @@
             text-decoration: none;
             padding: 0.5rem;
         }
-
         .mobile-menu-close {
             position: absolute;
             top: 1.5rem;
@@ -479,34 +446,28 @@
             text-align: center;
             justify-content: center;
         }
-
         .btn-primary {
             background: linear-gradient(135deg, var(--neon-purple-dark), var(--neon-pink-dark));
             color: #fff;
             box-shadow: 0 0 25px rgba(192,132,252,0.4);
         }
-
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 0 40px rgba(192,132,252,0.6);
         }
-
         .btn-outline {
             background: transparent;
             color: var(--neon-purple);
             border: 1.5px solid var(--neon-purple);
         }
-
         .btn-outline:hover {
             background: var(--neon-purple);
             color: var(--bg);
             box-shadow: 0 0 25px rgba(192,132,252,0.4);
         }
-
         .btn-lg {
             padding: clamp(0.8rem, 2.5vw, 1rem) clamp(1.8rem, 5vw, 2.4rem);
         }
-
         .btn-block {
             width: 100%;
         }
@@ -518,7 +479,6 @@
             align-items: center;
             position: relative;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -529,99 +489,174 @@
             background: radial-gradient(circle, rgba(192,132,252,0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
-
         .hero-content {
             max-width: 700px;
             position: relative;
             z-index: 2;
         }
-
         .hero h1 {
             margin-bottom: 1.2rem;
         }
-
         .hero-subtitle {
             font-size: clamp(0.9rem, 3vw, 1.1rem);
             color: var(--text-secondary);
             margin-bottom: 2rem;
             line-height: 1.8;
         }
-
         .hero-actions {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
 
-        /* OWNERS - SECCIÓN INCRIFE con foto y redes */
+        /* ==========================================
+           OWNERS - INCRIFE con foto grande y bio
+           ========================================== */
         .owners-section {
-            text-align: center;
-            padding: 2.5rem 0;
+            padding: 3rem 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
             margin: 1rem 0;
+            background: var(--bg-alt);
         }
 
-        .owners-content {
+        .owners-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             gap: 2rem;
-            flex-wrap: wrap;
         }
 
-        .owners-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+        /* Foto grande con efecto */
+        .owners-photo-wrapper {
+            width: 100%;
+            max-width: 500px;
+            border-radius: var(--radius-lg);
             overflow: hidden;
             border: 3px solid var(--neon-purple);
-            box-shadow: 0 0 30px rgba(192,132,252,0.3);
-            flex-shrink: 0;
+            box-shadow: 0 0 40px rgba(192,132,252,0.25), 0 0 80px rgba(192,132,252,0.1);
+            transition: transform 0.4s, box-shadow 0.4s;
+            cursor: pointer;
+            position: relative;
         }
-
-        .owners-avatar img {
+        .owners-photo-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 60px rgba(192,132,252,0.4), 0 0 100px rgba(192,132,252,0.2);
+        }
+        .owners-photo-wrapper img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             display: block;
+            transition: transform 0.5s;
+        }
+        .owners-photo-wrapper:hover img {
+            transform: scale(1.03);
         }
 
+        /* Badge de "click para ampliar" */
+        .owners-photo-wrapper .zoom-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .owners-photo-wrapper:hover .zoom-badge {
+            opacity: 1;
+        }
+
+        /* Modal para ver imagen en grande */
+        .photo-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: rgba(0,0,0,0.92);
+            backdrop-filter: blur(15px);
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            cursor: pointer;
+        }
+        .photo-modal.active {
+            display: flex;
+        }
+        .photo-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+            box-shadow: 0 0 80px rgba(192,132,252,0.3);
+            border: 2px solid var(--neon-purple);
+        }
+        .photo-modal .close-modal {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            font-size: 2.5rem;
+            color: #fff;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .photo-modal .close-modal:hover {
+            transform: rotate(90deg);
+        }
+
+        /* Texto de INCRIFE */
         .owners-text {
-            text-align: left;
-            max-width: 400px;
+            text-align: center;
+            max-width: 700px;
         }
-
-        .owners-text h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.3rem;
+        .owners-text h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 0.2rem;
         }
-
         .owners-text .owners-role {
             color: var(--neon-purple);
             font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
         }
-
         .owners-text .owners-bio {
             color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin: 0.5rem 0 0.8rem;
-            line-height: 1.6;
+            font-size: clamp(0.9rem, 2vw, 1.05rem);
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
         }
-
-        .owners-social a {
+        .owners-text .owners-bio strong {
             color: var(--neon-purple);
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
+        }
+        .owners-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .owners-social a {
+            color: var(--text-secondary);
+            font-size: 1.8rem;
             transition: color 0.3s, transform 0.3s;
             display: inline-block;
         }
-
         .owners-social a:hover {
             color: var(--neon-pink);
-            transform: scale(1.15);
+            transform: scale(1.15) translateY(-3px);
         }
 
         /* SERVICIOS */
@@ -630,7 +665,6 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.8rem;
         }
-
         .service-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -640,7 +674,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .service-card::before {
             content: '';
             position: absolute;
@@ -652,22 +685,18 @@
             transform: scaleX(0);
             transition: transform 0.3s;
         }
-
         .service-card:hover {
             transform: translateY(-5px);
             border-color: var(--neon-purple);
             box-shadow: var(--shadow-neon-strong);
         }
-
         .service-card:hover::before {
             transform: scaleX(1);
         }
-
         .service-card--featured {
             border-color: var(--neon-purple);
             box-shadow: 0 0 30px rgba(192,132,252,0.15);
         }
-
         .service-card__commission {
             font-size: clamp(1.5rem, 5vw, 2.2rem);
             font-weight: 800;
@@ -678,12 +707,10 @@
             -webkit-text-fill-color: transparent;
             margin: 1rem 0;
         }
-
         .service-card__features {
             list-style: none;
             margin: 1rem 0 1.5rem;
         }
-
         .service-card__features li {
             display: flex;
             align-items: center;
@@ -692,7 +719,6 @@
             font-size: clamp(0.75rem, 2vw, 0.85rem);
             color: var(--text-secondary);
         }
-
         .service-card__features li i {
             color: var(--neon-purple);
             font-size: 0.8rem;
@@ -704,7 +730,6 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
         }
-
         .model-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -713,13 +738,11 @@
             text-align: center;
             transition: var(--transition);
         }
-
         .model-card:hover {
             border-color: var(--neon-pink);
             transform: translateY(-5px);
             box-shadow: 0 0 30px rgba(236,72,153,0.2);
         }
-
         .model-card i {
             font-size: clamp(1.8rem, 5vw, 2.5rem);
             background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
@@ -728,12 +751,10 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
         }
-
         .model-card h3 {
             font-size: clamp(0.9rem, 2.5vw, 1rem);
             margin-bottom: 0.3rem;
         }
-
         .model-card p {
             font-size: clamp(0.7rem, 2vw, 0.8rem);
             color: var(--text-muted);
@@ -745,12 +766,10 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
         }
-
         .process-card {
             text-align: center;
             padding: clamp(1rem, 3vw, 1.5rem);
         }
-
         .process-number {
             width: clamp(50px, 10vw, 60px);
             height: clamp(50px, 10vw, 60px);
@@ -773,14 +792,12 @@
             gap: 1.5rem;
             text-align: center;
         }
-
         .stat-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             padding: clamp(1.2rem, 3vw, 1.8rem);
         }
-
         .stat-number {
             font-size: clamp(1.5rem, 5vw, 2.5rem);
             font-weight: 800;
@@ -796,14 +813,12 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2.5rem;
         }
-
         .contact-form {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             padding: clamp(1.5rem, 4vw, 2rem);
         }
-
         .contact-form input,
         .contact-form textarea,
         .contact-form select {
@@ -817,20 +832,17 @@
             font-family: var(--font-body);
             font-size: clamp(0.8rem, 2vw, 0.88rem);
         }
-
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
             border-color: var(--neon-purple);
             box-shadow: 0 0 10px rgba(192,132,252,0.2);
         }
-
         .contact-info {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
-
         .contact-info-item {
             display: flex;
             align-items: center;
@@ -841,11 +853,9 @@
             border-radius: var(--radius-md);
             transition: var(--transition);
         }
-
         .contact-info-item:hover {
             border-color: var(--neon-purple);
         }
-
         .contact-info-icon {
             width: clamp(40px, 8vw, 48px);
             height: clamp(40px, 8vw, 48px);
@@ -858,7 +868,6 @@
             font-size: clamp(1rem, 3vw, 1.2rem);
             flex-shrink: 0;
         }
-
         .contact-info-text strong {
             display: block;
             font-size: clamp(0.6rem, 2vw, 0.7rem);
@@ -874,7 +883,6 @@
             padding: 2rem 0;
             border-top: 1px solid var(--border);
         }
-
         .footer-social {
             display: flex;
             gap: 1.5rem;
@@ -882,22 +890,19 @@
             margin-bottom: 1rem;
             flex-wrap: wrap;
         }
-
         .footer-social a {
             color: var(--text-secondary);
             font-size: clamp(1.1rem, 4vw, 1.3rem);
             transition: color 0.3s;
         }
-
         .footer-social a:hover {
             color: var(--neon-purple);
         }
-
         .footer p {
             font-size: clamp(0.7rem, 2vw, 0.8rem);
         }
 
-        /* BOTONES FLOTANTES */
+        /* FLOTANTES */
         .floating-buttons {
             position: fixed;
             bottom: 25px;
@@ -907,7 +912,6 @@
             flex-direction: column;
             gap: 10px;
         }
-
         .floating-btn {
             width: clamp(42px, 10vw, 50px);
             height: clamp(42px, 10vw, 50px);
@@ -922,11 +926,9 @@
             box-shadow: 0 0 20px rgba(192,132,252,0.4);
             transition: transform 0.3s;
         }
-
         .floating-btn:hover {
             transform: scale(1.1);
         }
-
         .back-to-top {
             position: fixed;
             bottom: 25px;
@@ -943,7 +945,6 @@
             visibility: hidden;
             transition: opacity 0.3s;
         }
-
         .back-to-top.visible {
             opacity: 1;
             visibility: visible;
@@ -960,7 +961,6 @@
             z-index: 1;
             opacity: 0.3;
         }
-
         .custom-cursor {
             position: fixed;
             width: 28px;
@@ -973,19 +973,16 @@
             transform: translate(-50%, -50%);
             transition: width 0.2s, height 0.2s;
         }
-
         .custom-cursor.active {
             width: 48px;
             height: 48px;
             background: rgba(236,72,153,0.2);
             border-color: var(--neon-pink);
         }
-
         @media (pointer: coarse) {
             .custom-cursor { display: none; }
         }
 
-        /* SCROLLBAR */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -997,7 +994,7 @@
             border-radius: 3px;
         }
 
-        /* ========== RESPONSIVE ========== */
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -1008,40 +1005,33 @@
             .mobile-menu.active {
                 display: flex;
             }
-
-            .owners-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-            .owners-text {
-                text-align: center;
-            }
-            .owners-avatar {
-                width: 100px;
-                height: 100px;
-            }
-            .owners-social a {
-                font-size: 1.8rem;
-                margin: 0 0.7rem;
-            }
-
             .hero {
                 min-height: 70vh;
             }
             section {
                 padding: 3rem 0;
             }
+            .owners-photo-wrapper {
+                max-width: 100%;
+            }
+            .owners-text .owners-bio {
+                font-size: 0.9rem;
+            }
+            .owners-social a {
+                font-size: 1.5rem;
+            }
         }
-
         @media (max-width: 480px) {
             .hero-actions .btn {
                 width: 100%;
                 justify-content: center;
             }
-            .owners-avatar {
-                width: 80px;
-                height: 80px;
+            .owners-photo-wrapper .zoom-badge {
+                opacity: 1;
+                font-size: 0.6rem;
+                padding: 0.3rem 0.8rem;
+                bottom: 10px;
+                right: 10px;
             }
         }
     </style>
@@ -1071,8 +1061,6 @@
         <div class="nav-actions">
             <button class="theme-toggle" id="themeToggle">
                 <span class="ball"></span>
-                <i class="fas fa-sun" style="position: absolute; left: 9px; top: 50%; transform: translateY(-50%); font-size: 0.7rem; opacity: 0;"></i>
-                <i class="fas fa-moon" style="position: absolute; right: 9px; top: 50%; transform: translateY(-50%); font-size: 0.7rem;"></i>
             </button>
             <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
         </div>
@@ -1103,33 +1091,52 @@
     </div>
 </section>
 
-<!-- SECCIÓN OWNERS - INCRIFE (con foto y redes) -->
-<div class="owners-section">
+<!-- ==========================================
+     SECCIÓN INCRIFE - Fundador
+     Foto grande arriba + bio resumida
+     ========================================== -->
+<section class="owners-section" id="founder">
     <div class="container">
-        <div class="owners-content">
-            <div class="owners-avatar">
-                <img src="https://raw.githubusercontent.com/incrife/promotora/refs/heads/main/e71cd56f-82e6-46cb-b2bb-0244127f4dae.jpg" alt="INCRIFE - Fundador de NEXUS NIGHT" />
-            </div>
-            <div class="owners-text">
-                <h3>INCRIFE <span style="color: var(--neon-purple);">●</span> Founder</h3>
-                <p class="owners-role">Artista Musical · Promotor · Ticketing</p>
-                <p class="owners-bio">
-                    INCRIFE es un artista musical, productor y promotor de eventos con más de 10 años de experiencia en la industria de la noche en Barcelona. 
-                    Su pasión por la música y el entretenimiento le ha llevado a fundar NEXUS NIGHT, una plataforma que conecta discotecas con público a través de 
-                    venta de entradas inteligente y modelos promocionales. Conocido en redes como <strong>@incrife</strong>, combina su talento artístico con 
-                    estrategias de marketing para hacer vibrar cada evento.
-                </p>
-                <div class="owners-social">
-                    <a href="https://www.instagram.com/incrife" target="_blank" aria-label="Instagram de INCRIFE"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@incrife" target="_blank" aria-label="TikTok de INCRIFE"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://twitter.com/incrife" target="_blank" aria-label="Twitter de INCRIFE"><i class="fab fa-twitter"></i></a>
+        <div class="owners-container">
+
+            <!-- FOTO GRANDE CON EFECTO Y MODAL -->
+            <div class="owners-photo-wrapper" id="founderPhoto">
+                <img src="https://raw.githubusercontent.com/incrife/promotora/refs/heads/main/e71cd56f-82e6-46cb-b2bb-0244127f4dae.jpg" alt="INCRIFE - Fundador de NEXUS NIGHT, artista musical y promotor" />
+                <div class="zoom-badge">
+                    <i class="fas fa-expand"></i> Ver en grande
                 </div>
             </div>
+
+            <!-- TEXTO BIO RESUMIDO -->
+            <div class="owners-text">
+                <h2>INCRIFE <span style="color: var(--neon-purple);">✦</span> Founder</h2>
+                <p class="owners-role">Artista Musical · Productor · Promotor</p>
+                <p class="owners-bio">
+                    <strong>INCRIFE</strong> es un artista musical y audiovisual nacido en <strong>La Mina (Barcelona)</strong>.
+                    Activo desde 2022, su sonido fusiona <strong>afro, tekno y afrotrap</strong>, creando una identidad propia.
+                    Escribe y produce toda su música de forma independiente, y dirige la parte creativa de sus videoclips,
+                    cuidando cada detalle visual para que sus lanzamientos reflejen su universo artístico.
+                    Tras superar problemas de audición, encontró en la creatividad su forma de expresión,
+                    y hoy cada proyecto busca ofrecer una experiencia donde el sonido y la imagen tienen el mismo protagonismo.
+                </p>
+                <div class="owners-social">
+                    <a href="https://www.instagram.com/incrife" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@incrife" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://twitter.com/incrife" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
         </div>
     </div>
+</section>
+
+<!-- MODAL PARA VER FOTO EN GRANDE -->
+<div class="photo-modal" id="photoModal">
+    <button class="close-modal" id="closeModal">&times;</button>
+    <img src="https://raw.githubusercontent.com/incrife/promotora/refs/heads/main/e71cd56f-82e6-46cb-b2bb-0244127f4dae.jpg" alt="INCRIFE - Fundador de NEXUS NIGHT" />
 </div>
 
-<!-- SERVICIOS DE VENTA DE ENTRADAS -->
+<!-- SERVICIOS -->
 <section id="services" class="bg-alt">
     <div class="container">
         <div class="section-header">
@@ -1178,7 +1185,7 @@
     </div>
 </section>
 
-<!-- MODELOS PROMOCIONALES -->
+<!-- MODELOS -->
 <section id="models">
     <div class="container">
         <div class="section-header">
@@ -1211,7 +1218,7 @@
     </div>
 </section>
 
-<!-- CÓMO FUNCIONA -->
+<!-- PROCESO -->
 <section id="process" class="bg-alt">
     <div class="container">
         <div class="section-header">
@@ -1243,7 +1250,7 @@
     </div>
 </section>
 
-<!-- RESULTADOS / ESTADÍSTICAS -->
+<!-- STATS -->
 <section id="stats">
     <div class="container">
         <div class="section-header">
@@ -1360,12 +1367,11 @@
         localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
     });
 
-    // Mobile menu (CORREGIDO para móvil)
+    // Mobile menu
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileClose = document.getElementById('mobileClose');
-
-    function toggleMobileMenu(open) {
+    function toggleMobile(open) {
         if (open) {
             mobileMenu.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -1374,16 +1380,13 @@
             document.body.style.overflow = '';
         }
     }
-
-    hamburger.addEventListener('click', () => toggleMobileMenu(true));
-    mobileClose.addEventListener('click', () => toggleMobileMenu(false));
+    hamburger.addEventListener('click', () => toggleMobile(true));
+    mobileClose.addEventListener('click', () => toggleMobile(false));
     document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => toggleMobileMenu(false));
+        link.addEventListener('click', () => toggleMobile(false));
     });
-
-    // Cerrar menú al hacer click fuera (opcional)
     mobileMenu.addEventListener('click', (e) => {
-        if (e.target === mobileMenu) toggleMobileMenu(false);
+        if (e.target === mobileMenu) toggleMobile(false);
     });
 
     // Back to top
@@ -1394,7 +1397,7 @@
     });
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // Custom cursor (solo en dispositivos con mouse)
+    // Custom cursor
     const cursor = document.getElementById('customCursor');
     if (window.matchMedia('(pointer: fine)').matches) {
         document.addEventListener('mousemove', (e) => {
@@ -1462,9 +1465,7 @@
         requestAnimationFrame(draw);
     }
 
-    window.addEventListener('resize', () => {
-        initCanvas();
-    });
+    window.addEventListener('resize', () => { initCanvas(); });
     initCanvas();
     draw();
 
@@ -1477,6 +1478,31 @@
                 target.scrollIntoView({ behavior: 'smooth' });
             }
         });
+    });
+
+    // ==========================================
+    // MODAL PARA VER FOTO EN GRANDE
+    // ==========================================
+    const founderPhoto = document.getElementById('founderPhoto');
+    const photoModal = document.getElementById('photoModal');
+    const closeModal = document.getElementById('closeModal');
+
+    founderPhoto.addEventListener('click', () => {
+        photoModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    function closePhotoModal() {
+        photoModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    closeModal.addEventListener('click', closePhotoModal);
+    photoModal.addEventListener('click', (e) => {
+        if (e.target === photoModal) closePhotoModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closePhotoModal();
     });
 </script>
 </body>
